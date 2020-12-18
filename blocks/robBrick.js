@@ -16,7 +16,7 @@ goog.require('Blockly.Blocks');
 Blockly.Blocks['robBrick_EV3-Brick'] = {
     /**
      * EV3 brick.
-     * 
+     *
      * @constructs robBrick_EV3_brick
      * @memberof Block
      */
@@ -49,7 +49,7 @@ Blockly.Blocks['robBrick_EV3-Brick'] = {
 Blockly.Blocks['robBrick_Arduino-Brick'] = {
     /**
      * Arduino board.
-     * 
+     *
      * @constructs robBrick_Arduino_board
      * @memberof Block
      */
@@ -102,7 +102,7 @@ Blockly.Blocks['robBrick_WeDo-Brick'] = {
 Blockly.Blocks['robBrick_senseBox-Brick'] = {
     /**
      * SenseBox brick.
-     * 
+     *
      * @constructs robBrick_senseBox-Brick'
      * @memberof Block
      */
@@ -229,7 +229,7 @@ Blockly.Blocks['robBrick_senseBox-Brick'] = {
 Blockly.Blocks['robBrick_mBot-Brick'] = {
     /**
      * Mbot brick.
-     * 
+     *
      * @constructs robBrick_mBot-Brick'
      * @memberof Block
      */
@@ -258,7 +258,7 @@ Blockly.Blocks['robBrick_mBot-Brick'] = {
 Blockly.Blocks['robBrick_ardu-Brick'] = {
     /**
      * botnroll brick
-     * 
+     *
      * @constructs robBrick_ardu_brick
      * @memberof Block
      */
@@ -292,7 +292,7 @@ Blockly.Blocks['robBrick_ardu-Brick'] = {
 Blockly.Blocks['robBrick_vorwerk-Brick'] = {
     /**
      * vorwerk brick.
-     * 
+     *
      * @constructs robBrick_vorwerk-Brick
      * @memberof Block
      */
@@ -314,10 +314,36 @@ Blockly.Blocks['robBrick_vorwerk-Brick'] = {
     }
 };
 
+Blockly.Blocks['robBrick_Raspberrypi-Brick'] = {
+    /**
+     * vorwerk brick.
+     *
+     * @constructs robBrick_vorwerk-Brick
+     * @memberof Block
+     */
+
+    init : function() {
+        this.setColour('#BBBBBB');
+        this.setInputsInline(false);
+        var ipAddress = new Blockly.FieldTextInput('0.0.0.0')
+        var port = new Blockly.FieldTextInput('22', Blockly.FieldTextInput.nonnegativeNumberValidator)
+        var username = new Blockly.FieldTextInput('pi')
+        var password = new Blockly.FieldTextInput('raspberry')
+        var name = new Blockly.FieldTextInput(this.workspace.device.toUpperCase())
+        this.appendDummyInput().appendField(Blockly.Msg.BRICK_NAME).appendField(name, 'brick_label');
+        this.appendDummyInput().appendField(Blockly.Msg.BRICK_IPADDRESS).appendField(ipAddress, 'IP_ADDRESS');
+        this.appendDummyInput().appendField(Blockly.Msg.BRICK_PORT).appendField(port, 'PORT');
+        this.appendDummyInput().appendField(Blockly.Msg.BRICK_USERNAME).appendField(username, 'USERNAME');
+        this.appendDummyInput().appendField(Blockly.Msg.BRICK_PASSWORD).appendField(password, 'PASSWORD');
+        this.setTooltip(Blockly.Msg.NAOBRICK_TOOLTIP);
+        this.setDeletable(false);
+    }
+};
+
 Blockly.Blocks['robBrick_voltage'] = {
     /**
      * Represent a voltage sensor.
-     * 
+     *
      * @constructs robBrick_voltage
      * @memberof Block
      */
@@ -333,7 +359,7 @@ Blockly.Blocks['robBrick_voltage'] = {
 Blockly.Blocks['robBrick_ultrasonic'] = {
     /**
      * Represent an ultrasonic sensor.
-     * 
+     *
      * @constructs robBrick_ultrasonic
      * @memberof Block
      */
@@ -349,7 +375,7 @@ Blockly.Blocks['robBrick_ultrasonic'] = {
 Blockly.Blocks['robBrick_temperature'] = {
     /**
      * Represent an temperature sensor.
-     * 
+     *
      * @constructs robBrick_temperature
      * @memberof Block
      */
@@ -365,7 +391,7 @@ Blockly.Blocks['robBrick_temperature'] = {
 Blockly.Blocks['robBrick_ultrasonic_ardu'] = {
     /**
      * Represent an ardu ultrasonic sensor.
-     * 
+     *
      * @constructs robBrick_ultrasonic_ardu
      * @memberof Block
      */
@@ -382,7 +408,7 @@ Blockly.Blocks['robBrick_ultrasonic_ardu'] = {
 Blockly.Blocks['robBrick_colour'] = {
     /**
      * Represent EV3 colour sensor.
-     * 
+     *
      * @constructs robBrick_colour
      * @memberof Block
      */
@@ -399,7 +425,7 @@ Blockly.Blocks['robBrick_HiTechnic_colour'] = {
      * @deprecated
      * Represent HiTechnic NXT Color Sensor V2.
      * This is legacy code only needed for NXT.
-     * 
+     *
      * @constructs robBrick_HiTechnic_colour
      * @memberof Block
      */
@@ -414,7 +440,7 @@ Blockly.Blocks['robBrick_HiTechnic_colour'] = {
 Blockly.Blocks['robBrick_htcolour'] = {
     /**
      * Represent HiTechnic NXT Color Sensor V2.
-     * 
+     *
      * @constructs robBrick_htcolour
      * @memberof Block
      */
@@ -429,7 +455,7 @@ Blockly.Blocks['robBrick_htcolour'] = {
 Blockly.Blocks['robBrick_light'] = {
     /**
      * Represent a light sensor.
-     * 
+     *
      * @constructs robBrick_light
      * @memberof Block
      */
@@ -448,7 +474,7 @@ Blockly.Blocks['robBrick_light'] = {
 Blockly.Blocks['robBrick_infrared'] = {
     /**
      * Represent an infrared sensor.
-     * 
+     *
      * @constructs robBrick_infrared
      * @memberof Block
      */
@@ -464,7 +490,7 @@ Blockly.Blocks['robBrick_infrared'] = {
 Blockly.Blocks['robBrick_irseeker'] = {
     /**
      * Represent an HiTechnic IRSeeker V2 sensor.
-     * 
+     *
      * @constructs robBrick_irseeker
      * @memberof Block
      */
@@ -480,7 +506,7 @@ Blockly.Blocks['robBrick_irseeker'] = {
 Blockly.Blocks['robBrick_touch'] = {
     /**
      * Represent a touch sensor.
-     * 
+     *
      * @constructs robBrick_touch
      * @this.Blockly.Block
      * @returns immediately
@@ -499,7 +525,7 @@ Blockly.Blocks['robBrick_touch'] = {
 Blockly.Blocks['robBrick_compass'] = {
     /**
      * Represents a compass sensor
-     * 
+     *
      * @constructs robBrick_compass
      * @this.Blockly.Block
      * @memberof Block
@@ -524,7 +550,7 @@ Blockly.Blocks['robBrick_compass'] = {
 Blockly.Blocks['robBrick_gyro'] = {
     /**
      * Represent a gyro sensor.
-     * 
+     *
      * @constructs robBrick_gyro
      * @memberof Block
      */
@@ -540,7 +566,7 @@ Blockly.Blocks['robBrick_gyro'] = {
 Blockly.Blocks['robBrick_sound'] = {
     /**
      * Represent a sound sensor.
-     * 
+     *
      * @constructs robBrick_sound
      * @memberof Block
      */
@@ -557,7 +583,7 @@ Blockly.Blocks['robBrick_sound'] = {
 Blockly.Blocks['robBrick_joystick'] = {
     /**
      * Represent a joystick sensor.
-     * 
+     *
      * @constructs robBrick_joystick
      * @memberof Block
      */
@@ -573,7 +599,7 @@ Blockly.Blocks['robBrick_joystick'] = {
 Blockly.Blocks['robBrick_accelerometer'] = {
     /**
      * Represent an accelerometer sensor.
-     * 
+     *
      * @constructs robBrick_accelerometer
      * @memberof Block
      */
@@ -589,7 +615,7 @@ Blockly.Blocks['robBrick_accelerometer'] = {
 Blockly.Blocks['robBrick_flame'] = {
     /**
      * Represent a flame sensor.
-     * 
+     *
      * @constructs robBrick_flame
      * @memberof Block
      */
@@ -605,7 +631,7 @@ Blockly.Blocks['robBrick_flame'] = {
 Blockly.Blocks['robBrick_ambientlight'] = {
     /**
      * Represent an ambientlight sensor.
-     * 
+     *
      * @constructs robBrick_ambientlight
      * @memberof Block
      */
@@ -621,7 +647,7 @@ Blockly.Blocks['robBrick_ambientlight'] = {
 Blockly.Blocks['robBrick_motion'] = {
     /**
      * Represent an motion sensor.
-     * 
+     *
      * @constructs robBrick_motion
      * @memberof Block
      */
@@ -637,7 +663,7 @@ Blockly.Blocks['robBrick_motion'] = {
 Blockly.Blocks['robBrick_led'] = {
     /**
      * Represent an external LED.
-     * 
+     *
      * @constructs robBrick_led
      * @memberof Block
      */
@@ -653,7 +679,7 @@ Blockly.Blocks['robBrick_led'] = {
 Blockly.Blocks['robBrick_led_matrix'] = {
     /**
      * Represent an external LED matrix.
-     * 
+     *
      * @constructs robBrick_led_matrix
      * @memberof Block
      */
@@ -669,7 +695,7 @@ Blockly.Blocks['robBrick_led_matrix'] = {
 Blockly.Blocks['robBrick_motor_big'] = {
     /**
      * Represent a big motor.
-     * 
+     *
      * @constructs robActions_motor_big
      * @memberof Block
      */
@@ -692,7 +718,7 @@ Blockly.Blocks['robBrick_motor_big'] = {
 Blockly.Blocks['robBrick_motor_geared'] = {
     /**
      * Represent a geared motor.
-     * 
+     *
      * @constructs robBrick_motor_geared
      * @memberof Block
      */
@@ -710,7 +736,7 @@ Blockly.Blocks['robBrick_motor_geared'] = {
 Blockly.Blocks['robBrick_led_matrix'] = {
     /**
      * Represent an led matrix.
-     * 
+     *
      * @constructs robBrick_led_matrix
      * @memberof Block
      */
@@ -726,7 +752,7 @@ Blockly.Blocks['robBrick_led_matrix'] = {
 Blockly.Blocks['robBrick_motor_middle'] = {
     /**
      * Represents a middle motor.
-     * 
+     *
      * @constructs robActions_motor_middle
      * @memberof Block
      */
@@ -750,7 +776,7 @@ Blockly.Blocks['robBrick_motor_middle'] = {
 Blockly.Blocks['robBrick_motor_ardu'] = {
     /**
      * Represents a middle motor.
-     * 
+     *
      * @constructs robActions_motor_middle
      * @memberof Block
      */
@@ -766,7 +792,7 @@ Blockly.Blocks['robBrick_motor_ardu'] = {
 Blockly.Blocks['robBrick_actor'] = {
     /**
      * Represent any actor.
-     * 
+     *
      * @constructs robActions_motor_on
      * @this.Blockly.Block
      * @returns immediately
