@@ -292,12 +292,6 @@ confBlocks.compass.sensebox = {
     title : 'COMPASS',
     sensor : true
 };
-confBlocks.compass.orb = {
-    title : 'COMPASS',
-    ports : [ [ 'CONNECTOR', 'CONNECTOR' ] ],
-    pins : Blockly.Blocks.robConfigDefinitions['pinsOrb'],
-    sensor : true
-};
 
 confBlocks.moisture = {};
 confBlocks.moisture.arduino = {

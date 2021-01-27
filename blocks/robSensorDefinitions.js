@@ -261,19 +261,6 @@ sensors.compass.sensebox = {
     } ],
     ports : 'CONFIGURATION'
 };
-sensors.compass.orb = {
-    title : 'COMPASS',
-    ports : 'CONFIGURATION',
-    modes : [ {
-        name : 'ANGLE',
-        type : 'Number',
-        unit : 'DEGREE'
-    }, {
-        name : 'COMPASS',
-        type : 'Number',
-        unit : 'DEGREE'
-    } ],
-};
 
 sensors.colourtcs3472 = {};
 sensors.colourtcs3472.calliope = {
@@ -1552,7 +1539,7 @@ sensorsAll.sensebox = [ sensors.key.sensebox, sensors.light.sensebox, sensors.po
 sensors.humidity.sensebox, sensors.temperature.sensebox, sensors.lightveml.sensebox, sensors.accelerometer.sensebox, sensors.particle.sensebox, sensors.gps.sensebox,
         sensors.timer.sensebox, sensors.environmental.sensebox ];
 sensorsAll.edison = [ sensors.key.edison, sensors.infrared.edison, sensors.irseeker.edison, sensors.light.edison, sensors.sound.edison ];        
-sensorsAll.orb = [ sensors.ultrasonic.orb, sensors.gyro.orb, sensors.touch.orb, sensors.timer.orb, sensors.colour.orb, sensors.infrared.orb, sensors.compass.orb ];
+sensorsAll.orb = [ sensors.ultrasonic.orb, sensors.gyro.orb, sensors.touch.orb, sensors.timer.orb, sensors.colour.orb, sensors.infrared.orb];
 
 function initSensors() {
     for ( var sensor in sensors) {
@@ -1594,7 +1581,7 @@ Blockly.Blocks['mbedSensors_getSample'] = Blockly.Blocks['robSensors_getSample']
 Blockly.Blocks['mbedSensors_key_isPressed'] = Blockly.Blocks['robSensors_key_getSample'];
 Blockly.Blocks['mbedSensors_pin_isTouched'] = Blockly.Blocks['robSensors_pintouch_getSample'];
 Blockly.Blocks['mbedSensors_gesture_isActive'] = Blockly.Blocks['robSensors_gesture_getSample'];
-Blockly.Blocks['mbedSensors_compass_getSample'] = Blockly.Blocks['robSensors_compass_getSample'];
+Blockly.Blocks['mbedSensors_5_getSample'] = Blockly.Blocks['robSensors_compass_getSample'];
 Blockly.Blocks['mbedSensors_microphone_getSample'] = Blockly.Blocks['robSensors_sound_getSample'];
 Blockly.Blocks['mbedSensors_timer_getSample'] = Blockly.Blocks['robSensors_timer_getSample'];
 Blockly.Blocks['mbedSensors_temperature_getSample'] = Blockly.Blocks['robSensors_temperature_getSample'];
