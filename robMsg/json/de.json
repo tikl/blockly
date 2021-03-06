@@ -1441,6 +1441,12 @@
 	"MODE_IAQ" : "Innenraumluftqualität (IAQ)",
 	"MODE_CALIBRATION" : "Kalibrierungswert",
 	"MODE_CO2EQUIVALENT" : "CO2 Äquivalent",
-	"MODE_VOCEQUIVALENT" : "Atemluft VOC Äquivalent"
+	"MODE_VOCEQUIVALENT" : "Atemluft VOC Äquivalent",
+	"SLOT_BACK" : "hinten",
+	"SENSOR_POSITION" : "Position des Sensors",
+	"ALIGNMENT_DOWN" : "unten",
+	"ALIGNMENT_HORIZONTAL" : "horizontal",
+	"SENSOR_ALIGNMENT" : "Ausrichtung des Sensors",
+	"TOOLTIP_SIMULATION_ONLY": "Das Einstellen der Ausrichtung oder Position des Sensors wirkt sich nur in der Simulation aus. Beim Kompilieren des Quellcodes ist diese Option nicht von Bedeutung."
 }
 

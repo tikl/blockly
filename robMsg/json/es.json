@@ -701,5 +701,8 @@
 	"WRITE_TO_PIN_TOOLTIP": "Manda el valor al pin elegido",
 	"X": "x",
 	"Y": "y",
-	"YES": "sí"
+	"YES": "sí",
+
+	"SLOT_BACK" : "espalda",
+	"SENSOR_POSITION" : "posición del sensor"
 }
