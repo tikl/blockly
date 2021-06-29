@@ -109,6 +109,9 @@ Blockly.Blocks['variables_get'] = {
       // Block has been deleted.
       return;
     }
+    if (this.getParent() == null) {
+      this.draggedBefore = true;
+    }
     var name = this.getFieldValue('VAR');
     var procedure = Blockly.Variables.getProcedureName(name);
     if (procedure) {
@@ -133,13 +136,18 @@ Blockly.Blocks['variables_get'] = {
         block = block.getSurroundParent();
       } while (block);
       if (legal) {
-        this.setErrorText(null);
+        if (this.draggedBefore) {
+          this.setErrorText(null);
+        }
       } else {
         if (!procedure.match(/^[a-zA-Z][a-zA-Z0-9_]*$/)){
           this.setErrorText(Blockly.Msg.PROCEDURES_VARIABLES_LOOP_ERROR + this.getFieldValue('VAR'));
         } else {
           this.setErrorText(Blockly.Msg.PROCEDURES_VARIABLES_ERROR + procedure + Blockly.Msg.PROCEDURES_TITLE);
         }
+      }
+      if (this.getParent() != null) {
+        this.draggedBefore = false;
       }
     }
   },
