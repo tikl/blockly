@@ -124,6 +124,10 @@ Blockly.Blocks['robActions_motor_on'] = {
             ports = [ [ Blockly.Msg.MOTOR_PORT + ' A', 'A' ], [ Blockly.Msg.MOTOR_PORT + ' B', 'B' ], [ Blockly.Msg.MOTOR_PORT + ' C', 'C' ],
                     [ Blockly.Msg.MOTOR_PORT + ' D', 'D' ] ];
             break;
+        case 'orb':
+            ports = [ [ Blockly.Msg.MOTOR_PORT + ' A', 'A' ], [ Blockly.Msg.MOTOR_PORT + ' B', 'B' ], [ Blockly.Msg.MOTOR_PORT + ' C', 'C' ],
+                    [ Blockly.Msg.MOTOR_PORT + ' D', 'D' ] ];
+            break;
         case 'nxt':
             ports = [ [ Blockly.Msg.MOTOR_PORT + ' A', 'A' ], [ Blockly.Msg.MOTOR_PORT + ' B', 'B' ], [ Blockly.Msg.MOTOR_PORT + ' C', 'C' ] ];
             break;
@@ -201,7 +205,7 @@ Blockly.Blocks['robActions_motor_on_for'] = {
     init : function() {
         this.setColour(Blockly.CAT_ACTION_RGB);
         var ports = [ [ Blockly.Msg.MOTOR_PORT + ' A', 'A' ], [ Blockly.Msg.MOTOR_PORT + ' B', 'B' ], [ Blockly.Msg.MOTOR_PORT + ' C', 'C' ] ];
-        if (this.workspace.device === 'ev3') {
+        if ((this.workspace.device === 'ev3') || (this.workspace.device === 'orb')) {
             ports.push([ Blockly.Msg.MOTOR_PORT + ' D', 'D' ]);
         } else if (this.workspace.device === 'botnroll') {
             ports = [ [ Blockly.Msg.MOTOR + ' ' + Blockly.Msg.MOTOR_LEFT, 'B' ], [ Blockly.Msg.MOTOR + ' ' + Blockly.Msg.MOTOR_RIGHT, 'C' ] ];
@@ -329,7 +333,7 @@ Blockly.Blocks['robActions_motor_getPower'] = {
      */
     init : function() {
         var ports = [ [ Blockly.Msg.MOTOR_PORT + ' A', 'A' ], [ Blockly.Msg.MOTOR_PORT + ' B', 'B' ], [ Blockly.Msg.MOTOR_PORT + ' C', 'C' ] ];
-        if (this.workspace.device === 'ev3') {
+        if ((this.workspace.device === 'ev3') || (this.workspace.device === 'orb')) {
             ports.push([ Blockly.Msg.MOTOR_PORT + ' D', 'D' ]);
         }
         this.setColour(Blockly.CAT_ACTION_RGB);
@@ -357,7 +361,7 @@ Blockly.Blocks['robActions_motor_setPower'] = {
     init : function() {
         this.setColour(Blockly.CAT_ACTION_RGB);
         var ports = [ [ Blockly.Msg.MOTOR_PORT + ' A', 'A' ], [ Blockly.Msg.MOTOR_PORT + ' B', 'B' ], [ Blockly.Msg.MOTOR_PORT + ' C', 'C' ] ];
-        if (this.workspace.device === 'ev3') {
+        if ((this.workspace.device === 'ev3') || (this.workspace.device === 'orb')) {
             ports.push([ Blockly.Msg.MOTOR_PORT + ' D', 'D' ]);
         }
         var motorPort = new Blockly.FieldDropdown(ports);
@@ -384,7 +388,7 @@ Blockly.Blocks['robActions_motor_stop'] = {
     init : function() {
         this.setColour(Blockly.CAT_ACTION_RGB);
         var ports = [ [ Blockly.Msg.MOTOR_PORT + ' A', 'A' ], [ Blockly.Msg.MOTOR_PORT + ' B', 'B' ], [ Blockly.Msg.MOTOR_PORT + ' C', 'C' ] ];
-        if (this.workspace.device === 'ev3') {
+        if ((this.workspace.device === 'ev3') || (this.workspace.device === 'orb')) {
             ports.push([ Blockly.Msg.MOTOR_PORT + ' D', 'D' ]);
         }
         if (this.workspace.device === 'mbot') {

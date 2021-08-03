@@ -36,7 +36,7 @@ Blockly.Blocks['robBrick_EV3-Brick'] = {
         this.appendValueInput('MA').appendField('Motor A').setAlign(Blockly.ALIGN_RIGHT).setCheck('Actor');
         this.appendValueInput('MB').appendField('Motor B').setAlign(Blockly.ALIGN_RIGHT).setCheck('Actor');
         this.appendValueInput('MC').appendField('Motor C').setAlign(Blockly.ALIGN_RIGHT).setCheck('Actor');
-        if (this.workspace.device === 'ev3') {
+        if ((this.workspace.device === 'ev3') || (this.workspace.device == 'orb')) {
             this.appendValueInput('MD').appendField('Motor D').setAlign(Blockly.ALIGN_RIGHT).setCheck('Actor');
             this.setTooltip(Blockly.Msg.EV3BRICK_TOOLTIP);
         } else {
