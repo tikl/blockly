@@ -1290,6 +1290,7 @@ Blockly.Msg.FOURDIGITDISPLAY_SHOW_TOOLTIP = 'Displays a number [0-9999] on the 4
 Blockly.Msg.FOURDIGITDISPLAY_CLEAR_TOOLTIP = 'Clears the 4-Digit Display.';
 Blockly.Msg.COLON = 'colon';
 Blockly.Msg.FROM_POSITION = 'from position';
+Blockly.Msg.POSITION = 'position';
 Blockly.Msg.LEDBAR = 'LED Bar';
 Blockly.Msg.ACTION_LEDBAR = Blockly.Msg.LEDBAR;
 Blockly.Msg.LEDBAR_TOOLTIP = 'Represents a Grove LED Bar v2.0 by Seeed.';

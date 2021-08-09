@@ -321,6 +321,7 @@ confBlocks.light.calliope = {
     inbuilt: true
 };
 confBlocks.light.microbit = confBlocks.light.calliope;
+confBlocks.light.festobionicflower = confBlocks.light.calliope;
 confBlocks.light.sensebox = {
     title: 'LIGHT',
     ports: [
@@ -642,6 +643,20 @@ confBlocks.key.calliope = {
 };
 confBlocks.key.microbit = confBlocks.key.calliope;
 confBlocks.key.sensebox = confBlocks.key.arduino;
+confBlocks.key.festobionicflower = {
+    title: 'KEY',
+    ports: [
+        ['pin', 'PIN1']
+    ],
+    pins: function() {
+        return [
+            ['PAD1', 'PAD1'],
+            ['PAD2', 'PAD2']
+        ];
+    },
+    sensor: true,
+    standardPins: ['PAD1'],
+};
 confBlocks.key.wedo = {
     title: 'KEY',
     bricks: true,
@@ -993,6 +1008,15 @@ confBlocks.rgbled.arduino = {
         ['GND', 'GND']
     ]
 };
+confBlocks.rgbled.festobionicflower = {
+    title: 'RGBLED',
+    ports: [
+        ['pin', 'PIN1']
+    ],
+    sensor: false,
+    inbuilt: true
+};
+
 confBlocks.rgbled.calliope = {
     title: 'RGBLED',
     ports: [
@@ -1049,6 +1073,11 @@ confBlocks.stepmotor.arduino = {
         ['VCC', '5V']
     ]
 };
+confBlocks.stepmotor.festobionicflower = {
+    title: 'STEPMOTOR',
+    sensor: false,
+};
+
 
 confBlocks.servo = {};
 confBlocks.servo.arduino = {
