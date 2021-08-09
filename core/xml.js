@@ -664,6 +664,8 @@ Blockly.Xml.childToBlock = function(workspace, block, xmlChild) {
                 xmlChild.setAttribute('input', 'TIMER_VALUE');
             } else if (xmlChild.getAttribute('input') == 'KEYS_PRESSED') {
                 xmlChild.setAttribute('input', 'KEY_PRESSED');
+            } else if (xmlChild.getAttribute('input') == 'TOUCHED') {
+                xmlChild.setAttribute('input', 'TOUCHED');
             } else if (xmlChild.getAttribute('input') == 'TEMPERATURE') {
                 xmlChild.setAttribute('input', 'TEMPERATURE_VALUE');
             } else if (xmlChild.getAttribute('input') == 'MICROPHONE') {
@@ -790,6 +792,8 @@ Blockly.Xml.childToBlock = function(workspace, block, xmlChild) {
                 xmlChild.textContent = 'TIMER_VALUE';
             } else if (xmlChild.textContent == 'KEYS_PRESSED') {
                 xmlChild.textContent = 'KEY_PRESSED';
+            } else if (xmlChild.textContent == 'TOUCHED') {
+                xmlChild.textContent = 'TOUCHED';
             } else if (xmlChild.textContent == 'TEMPERATURE') {
                 xmlChild.textContent = 'TEMPERATURE_VALUE';
             } else if (xmlChild.textContent == 'MICROPHONE') {
@@ -824,6 +828,8 @@ Blockly.Xml.childToBlock = function(workspace, block, xmlChild) {
                 && block.type != 'robSensors_encoder_reset') {
             field = block.getField(name);
         } else if (name == 'KEY' && block.type != 'robSensors_getSample' && block.type != 'robSensors_key_getSample') {
+            field = block.getField(name);
+        } else if (name == 'TOUCH' && block.type != 'robSensors_getSample' && block.type != 'robSensors_touch_getSample') {
             field = block.getField(name);
         } else if (name == 'DIRECTION' && block.type != 'robSensors_getSample' && block.type != 'robSensors_accelerometer_getSample') {
             field = block.getField(name);
