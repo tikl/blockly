@@ -993,6 +993,14 @@ confBlocks.rgbled.arduino = {
         ['GND', 'GND']
     ]
 };
+confBlocks.rgbled.festobionic = {
+    title: 'RGBLED',
+    ports: [
+        ['pin', 'PIN1']
+    ],
+    sensor: false,
+    inbuilt: true
+};
 confBlocks.rgbled.calliope = {
     title: 'RGBLED',
     ports: [
