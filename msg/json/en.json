@@ -1789,5 +1789,7 @@
 	"MIN_PULSE_WIDTH": "Minimum pulse width",
 	"MAX_PULSE_WIDTH": "Maximum pulse width",
 	"FRAME_WIDTH": "Frame width",
-	"LIGHT_LDR": "Light (LDR)"
+	"LIGHT_LDR": "Light (LDR)",
+	"POPUP_REPLACE": "Replace",
+	"POPUP_BACKGROUND_REPLACE": "A program with the same name already exists. <br> Would you like to replace it?"
 }
