@@ -1609,3 +1609,6 @@ Blockly.Msg.MIN_PULSE_WIDTH = 'Minimum pulse width';
 Blockly.Msg.MAX_PULSE_WIDTH = 'Maximum pulse width';
 Blockly.Msg.FRAME_WIDTH = 'Frame width';
 Blockly.Msg.LIGHT_LDR = 'Light (LDR)';
+
+Blockly.Msg.POPUP_REPLACE = 'Replace';
+Blockly.Msg.POPUP_BACKGROUND_REPLACE = 'A program with the same name already exists. <br> Would you like to replace it?';
