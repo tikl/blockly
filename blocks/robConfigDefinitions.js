@@ -1001,6 +1001,7 @@ confBlocks.rgbled.festobionic = {
     sensor: false,
     inbuilt: true
 };
+
 confBlocks.rgbled.calliope = {
     title: 'RGBLED',
     ports: [
@@ -1057,6 +1058,11 @@ confBlocks.stepmotor.arduino = {
         ['VCC', '5V']
     ]
 };
+confBlocks.stepmotor.festobionic = {
+    title: 'STEPMOTOR',
+    sensor: false,
+};
+
 
 confBlocks.servo = {};
 confBlocks.servo.arduino = {
