@@ -23,7 +23,7 @@ Blockly.Blocks['festobionicActions_stepmotor'] = {
      */
     init: function () {
         this.setColour(Blockly.CAT_ACTION_RGB);
-        this.appendValueInput('VALUE').appendField('Schrittmotor Umdrehungen').setCheck('Number');
+        this.appendValueInput('VALUE').appendField('Stepmotor Position').setCheck('Number');
         this.setPreviousStatement(true);
         this.setNextStatement(true);
         this.setTooltip(Blockly.Msg.MOTOR_ON_FOR_TOOLTIP_SERVO);

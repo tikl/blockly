@@ -859,7 +859,16 @@ sensors.light.calliope = {
     portsHidden : true
 };
 sensors.light.microbit = sensors.light.calliope;
-sensors.light.festobionic = sensors.light.calliope;
+sensors.light.festobionic = {
+    title : 'LIGHT',
+    modes : [ {
+        name : 'VALUE',
+        type : 'Number',
+        unit : 'LUX'
+    } ],
+    ports : 'CONFIGURATION',
+    portsHidden : true
+};
 sensors.light.nxt = {
     title : 'LIGHT',
     modes : [ {
