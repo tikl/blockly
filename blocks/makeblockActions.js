@@ -54,8 +54,6 @@ Blockly.Blocks['makeblockActions_leds_off'] = {
         this.setColour(Blockly.CAT_ACTION_RGB);
         if (this.workspace.device === 'bob3') {
             this.appendDummyInput().appendField(Blockly.Msg.SET_LED).appendField(Blockly.Msg.NAO_LED_EYE).appendField(ledSide, 'LEDSIDE').appendField(Blockly.Msg.OFF);
-        } else if(this.workspace.device === 'festobionic') {
-            this.appendDummyInput().appendField(Blockly.Msg.SET_LED).appendField(Blockly.Msg.OFF);
         }else {
             this.appendDummyInput().appendField(Blockly.Msg.SET_LED).appendField(ledSide, 'LEDSIDE').appendField(Blockly.Msg.OFF);
         }
