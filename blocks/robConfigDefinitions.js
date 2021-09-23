@@ -321,6 +321,7 @@ confBlocks.light.calliope = {
     inbuilt: true
 };
 confBlocks.light.microbit = confBlocks.light.calliope;
+confBlocks.light.festobionic = confBlocks.light.calliope;
 confBlocks.light.sensebox = {
     title: 'LIGHT',
     ports: [
@@ -642,6 +643,20 @@ confBlocks.key.calliope = {
 };
 confBlocks.key.microbit = confBlocks.key.calliope;
 confBlocks.key.sensebox = confBlocks.key.arduino;
+confBlocks.key.festobionic = {
+    title: 'KEY',
+    ports: [
+        ['pin', 'PIN1']
+    ],
+    pins: function() {
+        return [
+            ['PAD1', 'PAD1'],
+            ['PAD2', 'PAD2']
+        ];
+    },
+    sensor: true,
+    standardPins: ['PAD1'],
+};
 confBlocks.key.wedo = {
     title: 'KEY',
     bricks: true,
