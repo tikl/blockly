@@ -18,7 +18,7 @@ On linux systems one possibility is
 - you have installed python 2.7 (:-<) 
 - run the `build.py` script
 
-A better solution on both linux and windows systems is
+A solution on windows systems or an alternative for linux is
 
 - you have installed docker
 - `docker run --mount type=bind,source=:your-blockly-git:,destination=/opt/blockly/blockly openroberta/blocklybuilder:1.0.0`
