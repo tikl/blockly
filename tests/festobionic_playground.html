@@ -61,7 +61,7 @@
 // Depending on the URL argument, render as LTR or RTL.
 var rtl = (document.location.search == '?rtl');
 var workspace = null;
-var device = 'festobionic'
+var device = 'festobionicflower'
 
 function start() {
   var toolbox = document.getElementById('toolbox');
@@ -291,8 +291,8 @@ h1 {
         </value>
       </block>
       <block type="robActions_set_relay"></block>
-      <block type="festobionicActions_steppermotor">
-        <value name="POWER">
+      <block type="festobionicActions_stepmotor">
+        <value name="VALUE">
           <block type="math_number" id="Dy#ytr1sQ2WFyWrdDQ_?" intask="true">
             <field name="NUM">90</field>
           </block>
@@ -359,15 +359,15 @@ h1 {
       </block>
     </category>
     <category name="TOOLBOX_LIGHT" svg="true">
-      <block type="robActions_brickLight_on"></block>
-      <block type="robActions_led_on">
-        <value name="COLOR">
-          <block type="robColour_picker">
-            <field name="COLOUR">#cc0000</field>
-          </block>
-        </value>
-      </block>
-      <block type="robActions_led_off"></block>
+      <!-- <block type="robActions_brickLight_on"></block> -->
+      <!-- <block type="robActions_led_on"> -->
+        <!-- <value name="COLOR"> -->
+          <!-- <block type="robColour_picker"> -->
+            <!-- <field name="COLOUR">#cc0000</field> -->
+          <!-- </block> -->
+        <!-- </value> -->
+      <!-- </block> -->
+      <!-- <block type="robActions_led_off"></block> -->
       <block type="makeblockActions_leds_on">
         <value name="COLOR">
           <block type="robColour_picker">
@@ -390,64 +390,68 @@ h1 {
   <category name="TOOLBOX_SENSOR" svg="true">
     <block type="robSensors_key_getSample"></block>
     <block type="robSensors_light_getSample"></block>
+	<block type="robSensors_timer_getSample"></block>
+	<block type="robSensors_timer_reset"></block>
   </category>
   <category name="TOOLBOX_CONTROL" svg="true">
     <category name="TOOLBOX_DECISION" svg="true">
-      <block type="robControls_if"></block>
-      <block type="robControls_ifElse"></block>
+		<block type="robControls_if"></block>
+		<block type="robControls_ifElse"></block>
     </category>
     <category name="TOOLBOX_LOOP" svg="true">
       <block type="robControls_loopForever"></block>
       <block type="controls_repeat_ext">
         <value name="TIMES">
-          <block type="math_number">
-            <field name="NUM">10</field>
-          </block>
+            <block type="math_number">
+                <field name="NUM">10</field>
+            </block>
         </value>
       </block>
-      <block type="robControls_for">
-        <value name="FROM">
-          <block type="math_number">
-            <field name="NUM">1</field>
-          </block>
-        </value>
-        <value name="TO">
-          <block type="math_number">
-            <field name="NUM">10</field>
-          </block>
-        </value>
-        <value name="BY">
-          <block type="math_number">
-            <field name="NUM">1</field>
-          </block>
-        </value>
-      </block>
-      <block type="robControls_forEach"></block>
-      <block type="controls_flow_statements"></block>
+      <!-- <block type="robControls_for"> -->
+        <!-- <value name="FROM"> -->
+          <!-- <block type="math_number"> -->
+            <!-- <field name="NUM">1</field> -->
+          <!-- </block> -->
+        <!-- </value> -->
+        <!-- <value name="TO"> -->
+          <!-- <block type="math_number"> -->
+            <!-- <field name="NUM">10</field> -->
+          <!-- </block> -->
+        <!-- </value> -->
+        <!-- <value name="BY"> -->
+          <!-- <block type="math_number"> -->
+            <!-- <field name="NUM">1</field> -->
+          <!-- </block> -->
+        <!-- </value> -->
+      <!-- </block> -->
+      <!-- <block type="robControls_forEach"></block> -->
+      <!-- <block type="controls_flow_statements"></block> -->
     </category>
     <category name="TOOLBOX_WAIT" svg="true">
       <block type="robControls_wait"></block>
-      <block type="robControls_wait_time">
-        <value name="WAIT">
-          <block type="math_number">
-            <field name="NUM">500</field>
-          </block>
-        </value>
-      </block>
-      <block type="robControls_wait_for">
-        <value name="WAIT0">
-          <block type="logic_compare">
-            <value name="A">
-              <block type="robSensors_getSample"></block>
+              <block type="robControls_wait_time">
+            <value name="WAIT">
+                <block type="math_number">
+                    <field name="NUM">500</field>
+                </block>
             </value>
-            <value name="B">
-              <block type="math_number">
-                <field name="NUM">50</field>
-              </block>
+        </block>
+        <block type="robControls_wait_for">
+            <value name="WAIT0">
+                <block type="logic_compare">
+                    <field name="OP">GT</field>
+                    <value name="A">
+                        <block type="robSensors_getSample">
+                        </block>
+                    </value>
+                    <value name="B">
+                        <block type="math_number">
+                            <field name="NUM">500</field>
+                        </block>
+                    </value>
+                </block>
             </value>
-          </block>
-        </value>
-      </block>
+        </block>
     </category>
   </category>
   <category name="TOOLBOX_LOGIC" svg="true">

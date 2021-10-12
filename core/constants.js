@@ -328,6 +328,7 @@ Blockly.TYPE_DROPDOWN = function(device, opt_handler) {
             }
         });
     case 'festobionic':
+    case 'festobionicflower':
     case 'vorwerk':
         return new Blockly.FieldDropdown([ [ Blockly.Msg.VARIABLES_TYPE_NUMBER, 'Number' ], [ Blockly.Msg.VARIABLES_TYPE_BOOLEAN, 'Boolean' ],
             [Blockly.Msg.VARIABLES_TYPE_STRING, 'String'], [Blockly.Msg.VARIABLES_TYPE_COLOUR, 'Colour'] , [ Blockly.Msg.VARIABLES_TYPE_ARRAY_NUMBER, 'Array_Number' ],
@@ -420,7 +421,7 @@ Blockly.LIST_TYPE_DROPDOWN = function(device) {
                 [ Blockly.Msg.VARIABLES_TYPE_STRING, 'String' ], [ Blockly.Msg.VARIABLES_TYPE_COLOUR, 'Colour' ] ], function(option) {
             this.sourceBlock_.updateType_(option);
         });
-    case 'festobionic':
+    case 'festobionicflower':
             return new Blockly.FieldDropdown([[Blockly.Msg.VARIABLES_TYPE_NUMBER, 'Number'], [Blockly.Msg.VARIABLES_TYPE_COLOUR, 'Colour']], function (option) {
                 this.sourceBlock_.updateType_(option);
             });
