@@ -1094,6 +1094,7 @@
     "FOURDIGITDISPLAY_CLEAR_TOOLTIP": "Löscht die Anzeige des 4-Ziffern Displays.",
     "COLON": "Doppelpunkt",
     "FROM_POSITION": "ab Position",
+    "POSITION": "Position",
     "LEDBAR": "LED Leiste",
     "LEDBAR_TOOLTIP": "Repräsentiert eine Grove LED Bar v2.0 von Seeed.",
     "LEDBAR_SET_TOOLTIP": "Setzt die angegebene LED [0-9] auf LED Bar auf die gewünschte Helligkeit [0-8].",
