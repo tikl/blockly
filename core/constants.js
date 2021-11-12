@@ -66,6 +66,10 @@ Blockly.HSV_VALUE = 0.65;
 /**
  * The rgb value for block colours in logic category.
  */
+Blockly.CAT_NEURAL_NETWORK_RGB = "#33B8CA";
+/**
+ * The rgb value for block colours in logic category.
+ */
 Blockly.CAT_LOGIC_RGB = "#33B8CA";
 /**
  * The rgb value for block colours in colour category.
@@ -123,7 +127,7 @@ Blockly.FLYOUT_OPACITY = .35;
 
 /**
  * Lookup table for icon - categories.
- * 
+ *
  * @const
  */
 Blockly.CAT_ICON = [];
@@ -144,6 +148,7 @@ Blockly.CAT_ICON['TOOLBOX_DECISION'] = 'flow-merge';
 Blockly.CAT_ICON['TOOLBOX_WAIT'] = 'wait';
 Blockly.CAT_ICON['TOOLBOX_LOOP'] = 'loop';
 Blockly.CAT_ICON['TOOLBOX_LOGIC'] = 'logic';
+Blockly.CAT_ICON['TOOLBOX_NEURAL_NETWORK'] = 'logic';
 Blockly.CAT_ICON['TOOLBOX_MATH'] = 'math';
 Blockly.CAT_ICON['TOOLBOX_TEXT'] = 'sort-alphabetically-outline';
 Blockly.CAT_ICON['TOOLBOX_LIST'] = 'th-small-outline';
@@ -166,98 +171,98 @@ Blockly.SPRITE = {
 
 /**
  * Required name space for SVG elements.
- * 
+ *
  * @const
  */
 Blockly.SVG_NS = 'http://www.w3.org/2000/svg';
 
 /**
  * Required name space for HTML elements.
- * 
+ *
  * @const
  */
 Blockly.HTML_NS = 'http://www.w3.org/1999/xhtml';
 
 /**
  * ENUM for a right-facing value input. E.g. 'set item to' or 'return'.
- * 
+ *
  * @const
  */
 Blockly.INPUT_VALUE = 1;
 
 /**
  * ENUM for a left-facing value output. E.g. 'random fraction'.
- * 
+ *
  * @const
  */
 Blockly.OUTPUT_VALUE = 2;
 
 /**
  * ENUM for a down-facing block stack. E.g. 'if-do' or 'else'.
- * 
+ *
  * @const
  */
 Blockly.NEXT_STATEMENT = 3;
 
 /**
  * ENUM for an up-facing block stack. E.g. 'break out of loop'.
- * 
+ *
  * @const
  */
 Blockly.PREVIOUS_STATEMENT = 4;
 
 /**
  * ENUM for an dummy input. Used to add field(s) with no input.
- * 
+ *
  * @const
  */
 Blockly.DUMMY_INPUT = 5;
 
 /**
  * ENUM for left alignment.
- * 
+ *
  * @const
  */
 Blockly.ALIGN_LEFT = -1;
 
 /**
  * ENUM for centre alignment.
- * 
+ *
  * @const
  */
 Blockly.ALIGN_CENTRE = 0;
 
 /**
  * ENUM for right alignment.
- * 
+ *
  * @const
  */
 Blockly.ALIGN_RIGHT = 1;
 
 /**
  * ENUM for no drag operation.
- * 
+ *
  * @const
  */
 Blockly.DRAG_NONE = 0;
 
 /**
  * ENUM for inside the sticky DRAG_RADIUS.
- * 
+ *
  * @const
  */
 Blockly.DRAG_STICKY = 1;
 
 /**
  * ENUM for freely draggable.
- * 
+ *
  * @const
  */
 Blockly.DRAG_FREE = 2;
 
 /**
  * Lookup table for determining the opposite type of a connection.
- * 
+ *
  * @const
  */
 Blockly.OPPOSITE_TYPE = [];
@@ -268,7 +273,7 @@ Blockly.OPPOSITE_TYPE[Blockly.PREVIOUS_STATEMENT] = Blockly.NEXT_STATEMENT;
 
 /**
  * Lookup table for determining the color of a data type .
- * 
+ *
  * @const
  */
 Blockly.DATA_TYPE = [];
@@ -444,28 +449,28 @@ Blockly.LIST_TYPE_DROPDOWN = function(device) {
 
 /**
  * ENUM for toolbox and flyout at top of screen.
- * 
+ *
  * @const
  */
 Blockly.TOOLBOX_AT_TOP = 0;
 
 /**
  * ENUM for toolbox and flyout at bottom of screen.
- * 
+ *
  * @const
  */
 Blockly.TOOLBOX_AT_BOTTOM = 1;
 
 /**
  * ENUM for toolbox and flyout at left of screen.
- * 
+ *
  * @const
  */
 Blockly.TOOLBOX_AT_LEFT = 2;
 
 /**
  * ENUM for toolbox and flyout at right of screen.
- * 
+ *
  * @const
  */
 Blockly.TOOLBOX_AT_RIGHT = 3;

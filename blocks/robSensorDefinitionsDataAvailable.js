@@ -32,9 +32,9 @@ integrated_sensor.lsm9ds1_gyro.nano33ble = {
 integrated_sensor.lsm9ds1_magneticfield = {};
 integrated_sensor.lsm9ds1_magneticfield.nano33ble = {
     params: [
-        { "target": "VARIABLE_X", "unit": "MILLIG" },
-        { "target": "VARIABLE_Y", "unit": "MILLIG" },
-        { "target": "VARIABLE_Z", "unit": "MILLIG" }
+        { "target": "VARIABLE_X", "unit": "GAUSS" },
+        { "target": "VARIABLE_Y", "unit": "GAUSS" },
+        { "target": "VARIABLE_Z", "unit": "GAUSS" }
     ]
 };
 
@@ -55,9 +55,9 @@ integrated_sensor.apds9960_gesture.nano33ble = {
 integrated_sensor.apds9960_color = {};
 integrated_sensor.apds9960_color.nano33ble = {
     params: [
-        { "target": "VARIABLE_R", "unit": "MILLIG" },
-        { "target": "VARIABLE_G", "unit": "MILLIG" },
-        { "target": "VARIABLE_B", "unit": "MILLIG" }
+        { "target": "VARIABLE_R", "unit": "INDEX" },
+        { "target": "VARIABLE_G", "unit": "INDEX" },
+        { "target": "VARIABLE_B", "unit": "INDEX" }
         ]
 };
 
@@ -71,7 +71,7 @@ integrated_sensor.lps22hb_pressure.nano33ble = {
 integrated_sensor.hts221_temperature = {};
 integrated_sensor.hts221_temperature.nano33ble = {
     params: [
-        { "target": "VARIABLE_VALUE", "unit": "DEGREE" }
+        { "target": "VARIABLE_VALUE", "unit": "DEGREE_CELSIUS" }
         ]
 };
 

@@ -17,7 +17,7 @@ goog.require('Blockly.Blocks.robConfigDefinitions');
 Blockly.Blocks['robActions_setLanguage'] = {
     /**
      * Sets the language the robot uses.
-     * 
+     *
      * @constructs robActions_setLanguage
      * @this.Blockly.Block
      * @param {String}
@@ -63,7 +63,7 @@ Blockly.Blocks['robActions_setLanguage'] = {
 Blockly.Blocks['robActions_sayText'] = {
     /**
      * Say a text.
-     * 
+     *
      * @constructs robActions_sayText
      * @this.Blockly.Block
      * @param {String}
@@ -84,7 +84,7 @@ Blockly.Blocks['robActions_sayText'] = {
 Blockly.Blocks['robActions_sayText_parameters'] = {
     /**
      * Say a text with additional parameters.
-     * 
+     *
      * @constructs robActions_sayText_parameters
      * @this.Blockly.Block
      * @param {String}
@@ -107,7 +107,7 @@ Blockly.Blocks['robActions_sayText_parameters'] = {
 Blockly.Blocks['robActions_motor_on'] = {
     /**
      * Turn motor on with specific power.
-     * 
+     *
      * @constructs robActions_motor_on
      * @this.Blockly.Block
      * @param {String/dropdown}
@@ -160,7 +160,7 @@ Blockly.Blocks['robActions_motor_on'] = {
         case 'edison':
             ports = [ [Blockly.Msg.MOTOR + ' ' + Blockly.Msg.MOTOR_LEFT, 'LMOTOR'],
                 [ Blockly.Msg.MOTOR + ' ' + Blockly.Msg.MOTOR_RIGHT, 'RMOTOR' ] ];
-            break;    
+            break;
         default:
             ports = [ 'INVALID DEVICE TYPE', 'UNDEFINED' ];
         }
@@ -184,7 +184,7 @@ Blockly.Blocks['robActions_motor_on'] = {
 
 Blockly.Blocks['robActions_motor_on_for'] = {
     /**
-     * 
+     *
      * @constructs robActions_motor_on_for
      * @this.Blockly.Block
      * @param {String/dropdown}
@@ -274,7 +274,7 @@ Blockly.Blocks['robActions_motor_on_for'] = {
 Blockly.Blocks['robActions_motor_on_for_ardu'] = {
     /**
      * Turn motor on and stop motor after execution of rotations/degrees.
-     * 
+     *
      * @constructs robActions_motor_on_for
      * @this.Blockly.Block
      * @param {String/dropdown}
@@ -306,7 +306,7 @@ Blockly.Blocks['robActions_motor_on_for_ardu'] = {
         } else {
             var ports = [ [ Blockly.Msg.MOTOR_PAN, 'A' ], [ Blockly.Msg.MOTOR_TILT, 'D' ] ];
             var motorPort = new Blockly.FieldDropdown(ports);
-            this.appendValueInput('POWER').appendField(Blockly.Msg.SET + " " + Blockly.Msg.MOTOR).appendField(motorPort, 'MOTORPORT').appendField(Blockly.Msg.TO 
+            this.appendValueInput('POWER').appendField(Blockly.Msg.SET + " " + Blockly.Msg.MOTOR).appendField(motorPort, 'MOTORPORT').appendField(Blockly.Msg.TO
                 + ' °').setCheck('Number');
         }
         this.setPreviousStatement(true);
@@ -318,7 +318,7 @@ Blockly.Blocks['robActions_motor_on_for_ardu'] = {
 Blockly.Blocks['robActions_motor_getPower'] = {
     /**
      * Get current power of this motor.
-     * 
+     *
      * @constructs robActions_getPower
      * @this.Blockly.Block
      * @param {String/dropdown}
@@ -344,7 +344,7 @@ Blockly.Blocks['robActions_motor_getPower'] = {
 Blockly.Blocks['robActions_motor_setPower'] = {
     /**
      * Set current power of this motor (not used).
-     * 
+     *
      * @constructs robActions_setPower
      * @this.Blockly.Block
      * @param {String/dropdown}
@@ -371,7 +371,7 @@ Blockly.Blocks['robActions_motor_setPower'] = {
 Blockly.Blocks['robActions_motor_stop'] = {
     /**
      * Stop this motor.
-     * 
+     *
      * @constructs robActions_motor_stop
      * @this.Blockly.Block
      * @param {String/dropdown}
@@ -536,7 +536,7 @@ Blockly.Blocks['robActions_motorDiff_curve_for'] = {
 Blockly.Blocks['robActions_display_picture'] = {
     /**
      * Display a picture on the screen.
-     * 
+     *
      * @constructs robActions_display_picture
      * @this.Blockly.Block
      * @param {String/dropdown}
@@ -568,7 +568,7 @@ Blockly.Blocks['robActions_display_picture'] = {
 Blockly.Blocks['robActions_display_picture_new'] = {
     /**
      * Display a picture on the screen.
-     * 
+     *
      * @constructs robActions_display_picture_new
      * @this.Blockly.Block
      * @param {String/dropdown}
@@ -719,7 +719,7 @@ Blockly.Blocks['robActions_display_text_oledssd1306i2c'] = {
 Blockly.Blocks['robActions_play_tone'] = {
     /**
      * Play a tone.
-     * 
+     *
      * @constructs robActions_play_tone
      * @this.Blockly.Block
      * @param {Number}
@@ -784,7 +784,7 @@ Blockly.Blocks['robActions_play_tone'] = {
 Blockly.Blocks['robActions_play_file'] = {
     /**
      * Play a sound file.
-     * 
+     *
      * @constructs robActions_play_file
      * @this.Blockly.Block
      * @param {String/dropdown}
@@ -810,7 +810,7 @@ Blockly.Blocks['robActions_play_file'] = {
 Blockly.Blocks['robActions_play_setVolume'] = {
     /**
      * Set volume.
-     * 
+     *
      * @constructs robActions_play_setVolume
      * @this.Blockly.Block
      * @param {Number}
@@ -832,7 +832,7 @@ Blockly.Blocks['robActions_play_setVolume'] = {
 Blockly.Blocks['robActions_play_getVolume'] = {
     /**
      * Get current volume
-     * 
+     *
      * @constructs robActions_play_getVolume
      * @this.Blockly.Block
      * @returns immediately
@@ -853,7 +853,7 @@ Blockly.Blocks['robActions_play_getVolume'] = {
 Blockly.Blocks['robActions_brickLight_on'] = {
     /**
      * Turn bricklight on.
-     * 
+     *
      * @constructs robActions_brickLight_on
      * @this.Blockly.Block
      * @param {String/dropdown}
@@ -900,7 +900,7 @@ Blockly.Blocks['robActions_brickLight_on'] = {
 Blockly.Blocks['robActions_led_on'] = {
     /**
      * Turns single led on.
-     * 
+     *
      * @constructs robActions_led_on
      * @this.Blockly.Block
      * @returns immediately
@@ -962,7 +962,7 @@ Blockly.Blocks['robActions_led_on'] = {
 Blockly.Blocks['robActions_led_off'] = {
     /**
      * Turns single led off.
-     * 
+     *
      * @constructs robActions_led_off
      * @this.Blockly.Block
      * @returns immediately
@@ -1021,7 +1021,7 @@ Blockly.Blocks['robActions_led_off'] = {
 Blockly.Blocks['robActions_sensorLight_on'] = {
     /**
      * Turn sensor light on.
-     * 
+     *
      * @constructs robActions_brickLight_on
      * @this.Blockly.Block
      * @param {String/dropdown}
@@ -1051,7 +1051,7 @@ Blockly.Blocks['robActions_sensorLight_on'] = {
 Blockly.Blocks['robActions_brickLight_off'] = {
     /**
      * Turn bricklight off.
-     * 
+     *
      * @constructs robActions_brickLight_off
      * @this.Blockly.Block
      * @returns immediately
@@ -1071,7 +1071,7 @@ Blockly.Blocks['robActions_brickLight_off'] = {
 Blockly.Blocks['robActions_brickLight_reset'] = {
     /**
      * Reset bricklight. Set the default bricklight: green and blinking.
-     * 
+     *
      * @constructs robActions_brickLight_reset
      * @this.Blockly.Block
      * @returns immediately
@@ -1119,7 +1119,7 @@ Blockly.Blocks['robActions_serial_print'] = {
     /**
      * Prints data to the serial port as human-readable ASCII text. We do not
      * support an additional format parameter so far.
-     * 
+     *
      * @constructs robActions_serial_print
      * @this.Blockly.Block
      * @param {String}
@@ -1146,7 +1146,7 @@ Blockly.Blocks['robActions_write_pin'] = {
                 that.updatePins_(option);
             }
         });
-        this.protocol_ = 'DIGITAL';        
+        this.protocol_ = 'DIGITAL';
         this.dependConfig = {
             'type' : this.protocol_,
             'dropDown' : this.dropDownPorts
@@ -1186,7 +1186,7 @@ Blockly.Blocks['robActions_write_pin'] = {
 Blockly.Blocks['robActions_pin_set_pull'] = {
     /**
      * Sets the chosen pin to the specified pull.
-     * 
+     *
      * @constructs robActions_pin_set_pull
      * @this.Blockly.Block
      * @param {String/dropdown}
@@ -1213,7 +1213,7 @@ Blockly.Blocks['robActions_pin_set_pull'] = {
 Blockly.Blocks['robActions_sendData'] = {
     /**
      * Sets the chosen pin to the specified pull.
-     * 
+     *
      * @constructs robActions_pin_set_pull
      * @this.Blockly.Block
      * @param {String/dropdown}
@@ -1393,7 +1393,7 @@ Blockly.Blocks['robActions_plot_clear'] = {
 Blockly.Blocks['robActions_debug'] = {
     /**
      * Debugs data to a system dependent output
-     * 
+     *
      * @constructs robActions_debug
      * @this.Blockly.Block
      * @param {String}
@@ -1413,7 +1413,7 @@ Blockly.Blocks['robActions_debug'] = {
 Blockly.Blocks['robActions_assert'] = {
     /**
      * Asserts data
-     * 
+     *
      * @constructs robActions_assert
      * @this.Blockly.Block
      * @param {String}
@@ -1445,7 +1445,7 @@ Blockly.Blocks['robActions_eval_expr'] = {
     /**
      * Provides a block to create expressions in the robot's programming
      * language
-     * 
+     *
      * @constructs robActions_eval_expr
      * @this.Blockly.Block
      * @param {any}
@@ -1497,21 +1497,6 @@ function appendFields(thisRef, keys) {
     }
 }
 
-function mustBeVariable(thisRef, keys) {    
-    thisRef.onchange = function() {
-        if (!thisRef.workspace || Blockly.Block.dragMode_ == 2) {
-            return;
-        }
-        for (var i = 0; i < keys.length; i++) {
-            var blockVar = thisRef.getInputTargetBlock(keys[i]);
-            if (blockVar && blockVar.type !== 'variables_get') {
-                blockVar.unplug();
-                blockVar.bumpNeighbours_();
-            }
-        }
-    }
-}
-
 function appendHeader(thisRef, key) {
     thisRef.setColour("#646464");
     thisRef.appendDummyInput().appendField(getBlocklyMsg(key));
@@ -1520,12 +1505,25 @@ function appendHeader(thisRef, key) {
     thisRef.setTooltip(getBlocklyMsg(key + "_TOOLTIP"));
 }
 
-Blockly.Blocks['robActions_nnstep'] = {
-        init : function() {
-            appendHeader(this, "nnStep");
-            appendFields(this,["NN_STEP_INPUT0","NN_STEP_INPUT1","NN_STEP_INPUT2","NN_STEP_OUTPUT0","NN_STEP_OUTPUT1","NN_STEP_OUTPUT2"]);
-            mustBeVariable(this, ["NN_STEP_OUTPUT0","NN_STEP_OUTPUT1","NN_STEP_OUTPUT2"])
+function bumpIfNotNeuron(connection) {
+    if (connection && connection.check_ != "neuron") {
+        var sourceBlock = connection.sourceBlock_;
+        sourceBlock.unplug();
+        sourceBlock.bumpNeighbours_();
+    }
+}
+
+function mustBeVariable(thisRef, keys) {
+    if (!thisRef.workspace || Blockly.Block.dragMode_ == 2) {
+        return;
+    }
+    for (var i = 0; i < keys.length; i++) {
+        var blockVar = thisRef.getInputTargetBlock(keys[i]);
+        if (blockVar && blockVar.type !== "variables_get") {
+            blockVar.unplug();
+            blockVar.bumpNeighbours_();
         }
+    }
 }
 
 Blockly.Blocks['robActions_aifes_setupneuralnet'] = {
@@ -1561,10 +1559,69 @@ Blockly.Blocks['robActions_aifes_train'] = {
 		}
 }
 
-Blockly.Blocks['robActions_aifes_classify'] = {
-		init : function() {
-			appendHeader(this, "NN_CLASSIFY");
-			appendFields(this,["NN_CLASS_PROBABILITIES"]);
-			mustBeVariable(this, ["NN_CLASS_PROBABILITIES"])
-		}
-}
+Blockly.Blocks["robActions_aifes_classify"] = {
+    init: function () {
+        appendHeader(this, "NN_CLASSIFY");
+        appendFields(this, ["NN_CLASS_PROBABILITIES"]);
+    },
+    onchange: function(evt) {
+        mustBeVariable(this, ["NN_CLASS_PROBABILITIES"]);
+    }
+};
+
+Blockly.Blocks["robActions_NNstep"] = {
+    init: function () {
+        appendHeader(this, "NNstep");
+        this.setColour(Blockly.CAT_LOGIC_RGB);
+        this.appendStatementInput("IONEURON");
+        this.getInput("IONEURON").connection.setCheck("neuron");
+    },
+    onchange: function (evt) {
+        bumpIfNotNeuron(this.getInput("IONEURON").connection.targetConnection);
+    },
+};
+
+Blockly.Blocks["robActions_inputneuron"] = {
+    init: function () {
+        this.setColour(Blockly.CAT_SENSOR_RGB);
+        var name = new Blockly.FieldTextInput("", this.validate);
+        name.maxDisplayLength = 75;
+        this.appendDummyInput()
+            .appendField("input neuron", "SENSORTITLE")
+            .appendField(name, "NAME");
+        this.appendValueInput("VALUE")
+            .setAlign(Blockly.ALIGN_RIGHT)
+            .appendField("value", "EXPR")
+            .setCheck("Number");
+        this.setPreviousStatement(true, "neuron");
+        this.setNextStatement(true, "neuron");
+        this.setInputsInline(true);
+    },
+    onchange: function (evt) {
+        bumpIfNotNeuron(this.nextConnection.targetConnection);
+        bumpIfNotNeuron(this.previousConnection.targetConnection);
+    }
+};
+
+Blockly.Blocks["robActions_outputneuron"] = {
+    init: function () {
+        this.setColour(Blockly.CAT_ACTION_RGB);
+        var name = new Blockly.FieldTextInput("", this.validate);
+        name.maxDisplayLength = 75;
+        this.appendDummyInput()
+            .appendField("output neuron", "SENSORTITLE")
+            .appendField(name, "NAME");
+        this.appendValueInput("VALUE")
+            .setAlign(Blockly.ALIGN_RIGHT)
+            .appendField("value", "EXPR")
+            .setCheck("Number");
+        this.setPreviousStatement(true, "neuron");
+        this.setNextStatement(true, "neuron");
+        this.setInputsInline(true);
+    },
+    onchange: function (evt) {
+        bumpIfNotNeuron(this.nextConnection.targetConnection);
+        bumpIfNotNeuron(this.previousConnection.targetConnection);
+        mustBeVariable(this, ["VALUE"]);
+    }
+};

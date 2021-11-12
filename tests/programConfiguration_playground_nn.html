@@ -4,7 +4,9 @@
 <meta charset="utf-8">
 <title>Program and Configuration Playground</title>
 <script src="../blockly_compressed.js"></script>
+<!--
 <script src="../core/blockly.js"></script>
+<script src="../core/constants.js"></script>
 <script src="../core/css.js"></script>
 <script src="../core/inject.js"></script>
 <script src="../core/field.js"></script>
@@ -49,8 +51,8 @@
 <script src="../blocks/robSensorDefinitions.js"></script>
 <script src="../blocks/robConfig.js"></script>
 <script src="../blocks/robConfigDefinitions.js"></script>
-<script src="../blocks/robSensorDefinitionsDataAvailable.js"></script>
 <script src="../blocks/robActions.js"></script>
+-->
 <script src="../msg/js/en.js"></script>
 <link rel="stylesheet" type="text/css" href="typicons.css">
 </link>
@@ -358,12 +360,9 @@ h1 {
             <block type="robSensors_hts221_humidity_getDataAvailableSample"></block>
         </category>
         <category name="TOOLBOX_NEURAL_NETWORK" svg="true">
-            <block type="robActions_aifes_setupneuralnet"></block>
-            <block type="robActions_aifes_initrawdata"></block>
-            <block type="robActions_aifes_addrawdata"></block>
-            <block type="robActions_aifes_addtrainingsdata"></block>
-            <block type="robActions_aifes_train"></block>
-            <block type="robActions_aifes_classify"></block>
+            <block type="robActions_NNstep"></block>
+            <block type="robActions_inputneuron"></block>
+            <block type="robActions_outputneuron"></block>
         </category>
         <category name="TOOLBOX_CONTROL" svg="true">
             <category name="TOOLBOX_DECISION" svg="true">
