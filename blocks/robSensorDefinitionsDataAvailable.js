@@ -23,9 +23,9 @@ integrated_sensor.lsm9ds1_acceleration.nano33ble = {
 integrated_sensor.lsm9ds1_gyro = {};
 integrated_sensor.lsm9ds1_gyro.nano33ble = {
     params: [
-        { "target": "VARIABLE_X", "unit": "MILLIG" },
-        { "target": "VARIABLE_Y", "unit": "MILLIG" },
-        { "target": "VARIABLE_Z", "unit": "MILLIG" }
+        { "target": "VARIABLE_X", "unit": "DEGREE_PER_SECOND" },
+        { "target": "VARIABLE_Y", "unit": "DEGREE_PER_SECOND" },
+        { "target": "VARIABLE_Z", "unit": "DEGREE_PER_SECOND" }
     ]
 };
 
