@@ -1571,7 +1571,7 @@ Blockly.Blocks["robActions_aifes_classify"] = {
 
 Blockly.Blocks["robActions_NNstep"] = {
     init: function () {
-        appendHeader(this, "NNstep");
+        appendHeader(this, "NN_STEP");
         this.setColour(Blockly.CAT_LOGIC_RGB);
         this.appendStatementInput("IONEURON");
         this.getInput("IONEURON").connection.setCheck("neuron");

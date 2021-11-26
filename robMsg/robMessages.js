@@ -1558,14 +1558,9 @@ Blockly.Msg.SENSOR_COLOURTCS3472_LIGHT_GETSAMPLE_TOOLTIP = Blockly.Msg.COLOUR_LI
 Blockly.Msg.SENSOR_COLOURTCS3472_RGB_GETSAMPLE_TOOLTIP = Blockly.Msg.COLOUR_RGB_GETSAMPLE_TOOLTIP;
 Blockly.Msg.SENSOR_DATA_READY = 'ready?';
 
-Blockly.Msg.NN_STEP = 'one step in the neural network';
-Blockly.Msg.NN_STEP_TOOLTIP = 'retrieve inputs, execute one step in the neural network, write the outputs into the variables';
-Blockly.Msg.NN_STEP_INPUT0 = 'input to neuron i0';
-Blockly.Msg.NN_STEP_INPUT1 = 'input to neuron i1';
-Blockly.Msg.NN_STEP_INPUT2 = 'input to neuron i2';
-Blockly.Msg.NN_STEP_OUTPUT0 = 'output of neuron o0';
-Blockly.Msg.NN_STEP_OUTPUT1 = 'output of neuron o1';
-Blockly.Msg.NN_STEP_OUTPUT2 = 'output of neuron o2';
+Blockly.Msg.NN_IO_NEURON_NAMES_INVALID = 'names of input/output neurons must be all different and valid (start with letter, no spaces, ...)';
+Blockly.Msg.NN_STEP_TOOLTIP = 'retrieve inputs, execute one step in a neural network, write the outputs into variables';
+Blockly.Msg.NN_STEP = 'one NN step';
 
 Blockly.Msg.NN_SETUP = 'setup the neural network';
 Blockly.Msg.NN_SETUP_TOOLTIP = 'define properties of a neural network, which can classify data';

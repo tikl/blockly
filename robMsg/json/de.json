@@ -1390,5 +1390,9 @@
     "MODE_IAQ": "Innenraumluftqualität (IAQ)",
     "MODE_CALIBRATION": "Kalibrierungswert",
     "MODE_CO2EQUIVALENT": "CO2 Äquivalent",
-    "MODE_VOCEQUIVALENT": "Atemluft VOC Äquivalent"
+    "MODE_VOCEQUIVALENT": "Atemluft VOC Äquivalent",
+	"NN_IO_NEURON_NAMES_INVALID": "Namen der Input/Output-Neuronem müssen unterschiedlich und gültig sein (mit Buchstaben beginnen, keine Leerzeichen, ...)",
+	"NN_STEP_TOOLTIP": "hole die Werte für die Input-Neuronen, führe einen Schritt im neuronalen Netzwerk aus und schreibe die Werte der Output-Neuronen in die Variablen",
+	"NN_STEP": "ein NN Schritt"
+
 }
