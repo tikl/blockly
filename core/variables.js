@@ -461,11 +461,11 @@ Blockly.Variables.allGlobalVariables = function() {
     if (block.type.indexOf('Controls_start') !== -1) {
       var descendants = block.getDescendants();
       if (descendants) {
-        variable: for (var i = 1; i < descendants.length; i++) {
-          if (descendants[i].getVarDecl && descendants[i].type === 'robGlobalVariables_declare') {
-            variableList.push(descendants[i].getVarDecl()[0]);
+        variable: for (var j = 1; j < descendants.length; j++) {
+          if (descendants[j].getVarDecl && descendants[j].type === 'robGlobalVariables_declare') {
+            variableList.push(descendants[j].getVarDecl()[0]);
           } else {
-            if (!descendants[i].getParent())
+            if (!descendants[j].getParent())
               break variable;
           }
         }
