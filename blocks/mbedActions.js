@@ -657,18 +657,31 @@ Blockly.Blocks['mbedActions_pin_set_pull'] = {
         this.setColour(Blockly.CAT_ACTION_RGB);
         var pull = new Blockly.FieldDropdown(
                 [ [ Blockly.Msg.PIN_PULL_UP, 'UP' ], [ Blockly.Msg.PIN_PULL_DOWN, 'DOWN' ], [ Blockly.Msg.PIN_PULL_NONE, 'NONE' ] ]);
-        this.dropDownPorts = getConfigPorts('digitalin');
+        this.dropDownPorts = getConfigPorts('');
         this.dependConfig = {
-            'type' : 'digitalin',
-            'dropDown' : this.dropDownPorts
+            'type': '',
+            'dropDown': this.dropDownPorts
         };
         this.appendDummyInput().appendField(Blockly.Msg.SET + ' ' + Blockly.Msg.PIN_PULL).appendField(pull, 'PIN_PULL').appendField(Blockly.Msg.ON + ' '
-                + Blockly.Msg.SENSOR_PIN).appendField(this.dropDownPorts, 'PIN_PORT'); // shouldnt be called PIN, would need a
+            + Blockly.Msg.SENSOR_PIN).appendField(this.dropDownPorts, 'PIN_PORT'); // shouldnt be called PIN, would need a
         // special clause in xml.js like
         // mbedActions_write_to_pin
         this.setPreviousStatement(true);
         this.setNextStatement(true);
         this.setTooltip(Blockly.Msg.PIN_SET_PULL_TOOLTIP);
+        this.setWarningText(Blockly.Msg.PIN_SET_PULL_BLOCK_WARNING);
+    },
+    onchange : function(event) {
+        if (!this.workspace || this.workspace.isFlyout || (event.type !== Blockly.Events.UI && event.type !== Blockly.Events.CREATE)) {
+            return;
+        }
+        if (!this.warning) {
+            this.setWarningText(Blockly.Msg.PIN_SET_PULL_BLOCK_WARNING);
+            return;
+        }
+        if (event.type === Blockly.Events.CREATE) {
+            this.warning.setVisible(true);
+        }
     }
 };
 

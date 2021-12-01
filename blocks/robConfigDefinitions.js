@@ -1214,13 +1214,45 @@ confBlocks.digitalout.arduino = {
     ports: [
         ['SENSOR_PIN', 'OUTPUT']
     ],
+    dropdowns: [
+        ['PIN_PULL', [
+            ['PIN_PULL_NONE', 'PIN_PULL_NONE'],
+            ['PIN_PULL_UP', 'PIN_PULL_UP'],
+        ]]
+    ],
     pins: function(a) {
         return Blockly.Blocks.robConfigDefinitions['pinsDigital'][a];
     },
     sensor: true,
 };
-confBlocks.digitalout.sensebox = confBlocks.digitalout.arduino;
+confBlocks.digitalout.sensebox = {
+    title: 'DIGITALOUT',
+    ports: [
+        ['SENSOR_PIN', 'OUTPUT']
+    ],
+    pins: function(a) {
+        return Blockly.Blocks.robConfigDefinitions['pinsDigital'][a];
+    },
+    sensor: true,
+};
 confBlocks.digitalout.calliope = {
+    title: 'DIGITALOUT',
+    ports: [
+        ['pin', 'PIN1']
+    ],
+    dropdowns: [
+        ['PIN_PULL', [
+            ['PIN_PULL_NONE', 'PIN_PULL_NONE'],
+            ['PIN_PULL_UP', 'PIN_PULL_UP'],
+            ['PIN_PULL_DOWN', 'PIN_PULL_DOWN']
+        ]]
+    ],
+    pins: function(a) {
+        return Blockly.Blocks.robConfigDefinitions['pinsDigital'][a];
+    },
+    sensor: true,
+};
+confBlocks.digitalout.microbit = {
     title: 'DIGITALOUT',
     ports: [
         ['pin', 'PIN1']
@@ -1230,7 +1262,6 @@ confBlocks.digitalout.calliope = {
     },
     sensor: true,
 };
-confBlocks.digitalout.microbit = confBlocks.digitalout.calliope;
 confBlocks.digitalout.raspberrypi = {
     title: 'DIGITALOUT',
     ports: [

@@ -635,6 +635,7 @@ Blockly.Msg.PIN_PULL_UP = 'up';
 Blockly.Msg.PIN_PULL_DOWN = 'down';
 Blockly.Msg.PIN_PULL_NONE = 'none';
 Blockly.Msg.PIN_SET_PULL_TOOLTIP = 'Sets the pull of the chosen pin';
+Blockly.Msg.PIN_SET_PULL_BLOCK_WARNING = 'This block got replaced. Please use the "Sensor digital"-block from the robotconfiguration';
 
 Blockly.Msg.CONFIGURATION_ERROR_MOTORS_ROTATION_DIRECTION = 'The direction of rotation of the left and right motor is different!';
 Blockly.Msg.CONFIGURATION_ERROR_MULTIPLE_RIGHT_MOTORS = 'You have multiple right motors assigned to your configuration!';

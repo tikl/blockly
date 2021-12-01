@@ -1129,6 +1129,7 @@
     "PIN_PULL_DOWN": "down",
     "PIN_PULL_NONE": "keiner",
     "PIN_SET_PULL_TOOLTIP": "Setzt den Pull des ausgewählten digitalen Pins.",
+    "PIN_SET_PULL_BLOCK_WARNING": "Dieser Block wurde ersetzt. Bitte benutze den 'Sensor Digital'-Block aus der Roboterkonfiguration",
     "BRICK_IPADDRESS": "IP-Adresse",
     "BRICK_PORT": "Port",
     "BRICK_USERNAME": "Benutzername",
