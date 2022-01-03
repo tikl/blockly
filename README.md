@@ -11,9 +11,9 @@ You use this git repo to build the `msg` directory and the `blockly-compressed.j
 
 On linux systems one possibility is
 
-- you have the closure-library next to this project (you need version 20200719.0.0)
+- you have the closure-library next to this project (you need version [20200719.0.0](https://github.com/google/closure-library/archive/refs/tags/v20200719.zip))
 - you have installed the closure compiler via npm: 
-  - e.g. `npm install --save google-closure-compiler`
+  - e.g. `npm install --save google-closure-compiler@20200719`
   - check the version: `npx google-closure-compiler --version` => `v20200719`
 - you have installed python 2.7 (:-<) 
 - run the `build.py` script
