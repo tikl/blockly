@@ -142,13 +142,15 @@ Blockly.RobConfig.disposeConfig = function(thisBlock) {
         }
         for (var d = 0; d < dropDown.length; d++) {
             var toRemove = new Set();
-            for (var i = 0; i < dropDown[d].menuGenerator_.length; i++) {
-                var dropDownEntry = dropDown[d].menuGenerator_[i][1];
-                if (dropDownEntry === thisBlock.getFieldValue('NAME') || subComponentNames.has(dropDownEntry)) {
-                    toRemove.add(dropDownEntry);
+            if (dropDown[d].menuGenerator_) {
+                for (var i = 0; i < dropDown[d].menuGenerator_.length; i++) {
+                    var dropDownEntry = dropDown[d].menuGenerator_[i][1];
+                    if (dropDownEntry === thisBlock.getFieldValue('NAME') || subComponentNames.has(dropDownEntry)) {
+                        toRemove.add(dropDownEntry);
+                    }
                 }
             }
-            if (toRemove.size > 0) {
+            if (dropDown[d].menuGenerator_ && toRemove.size > 0) {
                 dropDown[d].menuGenerator_ = dropDown[d].menuGenerator_.filter(function(item) {
                     return !toRemove.has(item[0]);
                 });
