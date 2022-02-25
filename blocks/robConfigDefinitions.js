@@ -643,20 +643,7 @@ confBlocks.key.calliope = {
 };
 confBlocks.key.microbit = confBlocks.key.calliope;
 confBlocks.key.sensebox = confBlocks.key.arduino;
-confBlocks.key.festobionicflower = {
-    title: 'KEY',
-    ports: [
-        ['pin', 'PIN1']
-    ],
-    pins: function() {
-        return [
-            ['PAD1', 'PAD1'],
-            ['PAD2', 'PAD2']
-        ];
-    },
-    sensor: true,
-    standardPins: ['PAD1'],
-};
+
 confBlocks.key.wedo = {
     title: 'KEY',
     bricks: true,
@@ -673,6 +660,22 @@ confBlocks.key.raspberrypi = {
     fixedPorts: [
         ['GND', 'GND']
     ]
+};
+
+confBlocks.touch = {};
+confBlocks.touch.festobionicflower = {
+    title: 'TOUCH',
+    ports: [
+        ['touch', 'TOUCHED']
+    ],
+    pins: function() {
+        return [
+            ['PAD1', 'PAD1'],
+            ['PAD2', 'PAD2']
+        ];
+    },
+    sensor: true,
+    standardPins: ['PAD1'],
 };
 
 confBlocks.drop = {};
@@ -1075,6 +1078,9 @@ confBlocks.stepmotor.arduino = {
 };
 confBlocks.stepmotor.festobionicflower = {
     title: 'STEPMOTOR',
+    ports: [
+        ['step', 'STEP1']
+    ],
     sensor: false,
 };
 

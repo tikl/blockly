@@ -1,7 +1,7 @@
 {
 	"@metadata": {
 		"author": "Ellen Spertus <ellen.spertus@gmail.com>",
-		"lastupdated": "2021-12-01 11:09:28.460337",
+		"lastupdated": "2022-02-25 10:30:55.947978",
 		"locale": "en",
 		"messagedocumentation" : "qqq"
 	},
@@ -379,6 +379,7 @@
 	"MOTOR_ON_FOR_TOOLTIP_MS": "Turns motor on and stops motor after execution after time has passed.",
 	"MOTOR_ON_FOR_TOOLTIP_RPM": "Turns motor on at speed in rpms (rotation per minute) and stops motor after execution of rotations/degrees.",
 	"MOTOR_ON_FOR_TOOLTIP_SERVO": "Sets the servo motor to a specific position in degrees.",
+	"MOTOR_ON_FOR_TOOLTIP_STEPPER_FESTOBIONICFLOWER": "Sets the stepper motor to a specific position in rotations.",
 	"STEP_MOTOR_ON_TOOLTIP": "Turns motor on with a provided speed in rpm and stops motor after execution of provided number of rotations.",
 	"MOTOR_GETPOWER_TOOLTIP": "Gets current power of this motor.",
 	"MOTOR_SETPOWER_TOOLTIP": "Sets power of this motor.",
@@ -481,6 +482,8 @@
 	"MOTOR_DEGREE": "degree",
 	"MOTOR_ROTATION": "rotation",
 	"MOTOR_ROTATION_PER_MINUTE": "rpm",
+	"MOTOR_OPEN": "open",
+	"MOTOR_CLOSE": "close",
 	"MOTOR_FOREWARD": "forwards",
 	"MOTOR_BACKWARD": "backwards",
 	"MOTOR_DRIVE": "drive",

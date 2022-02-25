@@ -786,7 +786,6 @@ sensors.key.calliope = {
     ports : 'CONFIGURATION'
 };
 sensors.key.microbit = sensors.key.calliope;
-sensors.key.festobionicflower = sensors.key.calliope;
 sensors.key.ev3 = {
     title : 'KEY',
     modes : [ {
@@ -1272,6 +1271,15 @@ sensors.touch.vorwerk = {
     slots : [ [ 'SLOT_FRONT', 'FRONT' ], [ 'SLOT_SIDE', 'SIDE' ] ]
 };
 
+sensors.touch.festobionicflower = {
+    title : 'TOUCH',
+    modes : [ {
+        name : 'PRESSED',
+        type : 'Boolean',
+        question : true
+    } ],
+    ports : 'CONFIGURATION'
+};
 sensors.ultrasonic = {};
 sensors.ultrasonic.arduino = {
     title : 'ULTRASONIC',
@@ -1500,7 +1508,7 @@ sensorsAll.arduino = [ sensors.out.arduino, sensors.key.arduino, sensors.timer.a
         sensors.motion.arduino, sensors.pulse.arduino, sensors.drop.arduino, sensors.rfid.arduino, sensors.gyro.arduino,
         sensors.accelerometer.arduino ];
 sensorsAll.festobionic = [ sensors.timer.arduino];
-sensorsAll.festobionicflower = [ sensors.timer.festobionicflower, sensors.key.festobionicflower, sensors.light.festobionicflower];
+sensorsAll.festobionicflower = [ sensors.timer.festobionicflower, sensors.touch.festobionicflower, sensors.light.festobionicflower];
 sensorsAll.nao = [ sensors.touch.nao, sensors.accelerometer.nao, sensors.gyro.nao, sensors.ultrasonic.nao, sensors.fsr.nao, sensors.electriccurrent.nao,
         sensors.detectface.nao, sensors.detectmark.nao ];
 sensorsAll.vorwerk = [ sensors.touch.vorwerk, sensors.accelerometer.vorwerk, sensors.ultrasonic.vorwerk, sensors.wall.vorwerk, sensors.drop_off.vorwerk ];
