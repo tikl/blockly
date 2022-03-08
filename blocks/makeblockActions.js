@@ -29,8 +29,13 @@ Blockly.Blocks['makeblockActions_leds_on'] = {
         if (this.workspace.device === 'bob3') {
             this.appendValueInput('COLOR').appendField(Blockly.Msg.SET_LED).appendField(Blockly.Msg.NAO_LED_EYE).appendField(ledSide, 'LEDSIDE').appendField(Blockly.Msg.ON).appendField(Blockly.Msg.BRICKLIGHT_COLOR).setCheck('Colour');
         } else if (this.workspace.device === 'festobionicflower') {
+            var ports = getConfigPorts('rgbled');
+            this.dependConfig = {
+                'type' : 'rgbled',
+                'dropDown' : ports
+            };
             ledSide.setVisible(false);
-            this.appendValueInput('COLOR').appendField(Blockly.Msg.SET_LED).appendField(ledSide, 'LEDSIDE').appendField(Blockly.Msg.ON).appendField(Blockly.Msg.BRICKLIGHT_COLOR).setCheck('Colour');
+            this.appendValueInput('COLOR').appendField(Blockly.Msg.SET_LED).appendField(ledSide, 'LEDSIDE').appendField(ports).appendField(Blockly.Msg.ON).appendField(Blockly.Msg.BRICKLIGHT_COLOR).setCheck('Colour');
         } else {
             this.appendValueInput('COLOR').appendField(Blockly.Msg.SET_LED).appendField(ledSide, 'LEDSIDE').appendField(Blockly.Msg.ON).appendField(Blockly.Msg.BRICKLIGHT_COLOR).setCheck('Colour');
         }

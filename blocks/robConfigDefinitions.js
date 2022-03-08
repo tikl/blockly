@@ -73,6 +73,9 @@ Blockly.Blocks.robConfigDefinitions['pinsDigital'].sensebox = function() {
 Blockly.Blocks.robConfigDefinitions['pinsDigital'].festobionic = function() {
     return createPins(1, 4);
 };
+Blockly.Blocks.robConfigDefinitions['pinsDigital'].festobionicflower = function() {
+    return createPins(1, 4);
+};
 Blockly.Blocks.robConfigDefinitions['pinsDigital'].calliope = function() {
     var array = [
         ['P0', '0'],
@@ -321,7 +324,13 @@ confBlocks.light.calliope = {
     inbuilt: true
 };
 confBlocks.light.microbit = confBlocks.light.calliope;
-confBlocks.light.festobionicflower = confBlocks.light.calliope;
+confBlocks.light.festobionicflower = {
+    title: 'LIGHT',
+    ports: [
+        ['pin', 'PIN1']
+    ],
+    sensor: true,
+};
 confBlocks.light.sensebox = {
     title: 'LIGHT',
     ports: [
@@ -1017,7 +1026,6 @@ confBlocks.rgbled.festobionicflower = {
         ['pin', 'PIN1']
     ],
     sensor: false,
-    inbuilt: true
 };
 
 confBlocks.rgbled.calliope = {
