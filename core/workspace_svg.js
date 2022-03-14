@@ -277,7 +277,7 @@ Blockly.WorkspaceSvg.prototype.addZoomControls_ = function(bottom) {
   this.zoomControls_ = new Blockly.ZoomControls(this);
   var svgZoomControls = this.zoomControls_.createDom();
   this.svgGroup_.appendChild(svgZoomControls);
-  return this.zoomControls_.init(bottom); 
+  return this.zoomControls_.init(bottom);
 };
 
 /**
@@ -324,9 +324,9 @@ Blockly.WorkspaceSvg.prototype.resize = function() {
   if (this.trashcan) {
     this.trashcan.position();
   }
-  if (this.robControls) {  
+  if (this.robControls) {
     this.robControls.position();
-  } else if (this.zoomControls_) {  
+  } else if (this.zoomControls_) {
     this.zoomControls_.position();
   }
   if (this.scrollbar) {
@@ -489,6 +489,10 @@ Blockly.WorkspaceSvg.prototype.paste = function(xmlBlock) {
   // Move the duplicate to original position.
   var blockX = parseInt(xmlBlock.getAttribute('x'), 10);
   var blockY = parseInt(xmlBlock.getAttribute('y'), 10);
+  var descendants = block.getDescendants();
+  for (var i = 0; i < descendants.length; i++) {
+    descendants[i].setInTask(false);
+  }
   if (!isNaN(blockX) && !isNaN(blockY)) {
     if (this.RTL) {
       blockX = -blockX;
@@ -1011,7 +1015,7 @@ Blockly.WorkspaceSvg.prototype.updateRobControls = function() {
   this.robControls.dispose();
   if (this.options.robControls && this.options.zoomOptions && this.options.zoomOptions.controls) {
     this.addRobControls_(this.options.zoomOptions.controls);
-  } 
+  }
 };
 
 /**
