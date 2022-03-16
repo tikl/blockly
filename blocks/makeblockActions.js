@@ -15,7 +15,7 @@ goog.require('Blockly.Blocks');
 Blockly.Blocks['makeblockActions_leds_on'] = {
     /**
      * Turn brick LED on.
-     * 
+     *
      * @constructs makeblockActions_leds_on
      * @this.Blockly.Block
      * @param {String/dropdown}
@@ -26,7 +26,7 @@ Blockly.Blocks['makeblockActions_leds_on'] = {
     init : function() {
         var ledSide = new Blockly.FieldDropdown([ [ Blockly.Msg.MOTOR_LEFT, 'Left' ], [ Blockly.Msg.MOTOR_RIGHT, 'Right' ] ]);
         this.setColour(Blockly.CAT_ACTION_RGB);
-        if (this.workspace.device === 'bob3') {
+        if (this.workspace.device === 'bob3' || this.workspace.device === 'rob3rta') {
             this.appendValueInput('COLOR').appendField(Blockly.Msg.SET_LED).appendField(Blockly.Msg.NAO_LED_EYE).appendField(ledSide, 'LEDSIDE').appendField(Blockly.Msg.ON).appendField(Blockly.Msg.BRICKLIGHT_COLOR).setCheck('Colour');
         } else {
             this.appendValueInput('COLOR').appendField(Blockly.Msg.SET_LED).appendField(ledSide, 'LEDSIDE').appendField(Blockly.Msg.ON).appendField(Blockly.Msg.BRICKLIGHT_COLOR).setCheck('Colour');
@@ -40,7 +40,7 @@ Blockly.Blocks['makeblockActions_leds_on'] = {
 Blockly.Blocks['makeblockActions_leds_off'] = {
     /**
      * Turn brick LED off.
-     * 
+     *
      * @constructs makeblockActions_brickLight_off
      * @this.Blockly.Block
      * @returns immediately
@@ -49,7 +49,7 @@ Blockly.Blocks['makeblockActions_leds_off'] = {
     init : function() {
         var ledSide = new Blockly.FieldDropdown([ [ Blockly.Msg.MOTOR_LEFT, 'Left' ], [ Blockly.Msg.MOTOR_RIGHT, 'Right' ] ]);
         this.setColour(Blockly.CAT_ACTION_RGB);
-        if (this.workspace.device === 'bob3') {
+        if (this.workspace.device === 'bob3' || this.workspace.device === 'rob3rta') {
             this.appendDummyInput().appendField(Blockly.Msg.SET_LED).appendField(Blockly.Msg.NAO_LED_EYE).appendField(ledSide, 'LEDSIDE').appendField(Blockly.Msg.OFF);
         } else {
             this.appendDummyInput().appendField(Blockly.Msg.SET_LED).appendField(ledSide, 'LEDSIDE').appendField(Blockly.Msg.OFF);

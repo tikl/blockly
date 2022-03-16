@@ -1043,6 +1043,22 @@ sensors.pintouch.microbit = {
     standardPort : '1'
 };
 
+sensors.pintouch.rob3rta = {
+    title : 'PINTOUCH',
+    modes : [ {
+        name : 'PRESSED',
+        type : 'Boolean',
+        question : true
+    } ],
+    ports : [ {
+        port : [ 'PORT_EAR', 'EAR' ],
+        slots : [ [ 'LEFT', '2' ], [ 'RIGHT', '1' ] ]
+    }, {
+        port : [ 'PORT_WHEEL', 'WHEEL' ],
+        slots : [ [ 'A', 'A' ], [ 'B', 'B' ], [ 'C', 'C' ], [ 'D', 'D' ] ]
+    } ]
+};
+
 sensors.pulse = {};
 sensors.pulse.arduino = {
     title : 'PULSE',
@@ -1469,6 +1485,11 @@ sensors.rfid.nano33ble          = sensors.rfid.arduino;
 sensors.gyro.nano33ble          = sensors.gyro.arduino;
 sensors.accelerometer.nano33ble = sensors.accelerometer.arduino;
 
+sensors.code.rob3rta            = sensors.code.bob3;
+sensors.infrared.rob3rta        = sensors.infrared.bob3;
+sensors.temperature.rob3rta     = sensors.temperature.bob3;
+sensors.timer.rob3rta           = sensors.timer.bob3;
+
 var sensorsAll = [];
 sensorsAll.botnroll = [ sensors.infrared.botnroll, sensors.light.botnroll, sensors.compass.botnroll, sensors.ultrasonic.botnroll, sensors.colour.botnroll,
         sensors.key.botnroll ];
@@ -1500,6 +1521,7 @@ sensorsAll.nano33ble = [ sensors.out.nano33ble, sensors.key.nano33ble, sensors.t
     sensors.light.nano33ble, sensors.moisture.nano33ble, sensors.potentiometer.nano33ble, sensors.infrared.nano33ble, sensors.humidity.nano33ble,
     sensors.motion.nano33ble, sensors.pulse.nano33ble, sensors.drop.nano33ble, sensors.rfid.nano33ble, sensors.gyro.nano33ble,
     sensors.accelerometer.arduino ];
+sensorsAll.rob3rta = [ sensors.pintouch.rob3rta, sensors.infrared.rob3rta, sensors.temperature.rob3rta, sensors.timer.rob3rta ];
 
 function initSensors() {
     for ( var sensor in sensors) {

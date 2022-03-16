@@ -64,7 +64,7 @@ Blockly.Blocks['robSensors_timer_reset'] = {
     init: function() {
         this.setColour(Blockly.CAT_SENSOR_RGB);
         var sensorNum;
-        if (this.workspace.device === 'nxt' || this.workspace.device === 'botnroll' || this.workspace.device === 'bob3' || this.workspace.device === 'wedo') {
+        if (this.workspace.device === 'nxt' || this.workspace.device === 'botnroll' || this.workspace.device === 'bob3' || this.workspace.device === 'wedo' || this.workspace.device === 'rob3rta') {
             sensorNum = new Blockly.FieldDropdown([[Blockly.Msg.SENSOR_TIMER + ' 1', '1']]);
         } else {
             sensorNum = new Blockly.FieldDropdown([[Blockly.Msg.SENSOR_TIMER + ' 1', '1'], [Blockly.Msg.SENSOR_TIMER + ' 2', '2'],
@@ -393,7 +393,13 @@ Blockly.Blocks['robSensors_generic_all'] = {
         this.slots = [];
 
         var modeSensor = [];
+        let workspaceDeviceText = ' ';
+
         for (var i = 0; i < sensors.length; i++) {
+            if (this.workspace.device.toUpperCase() !== 'ROB3RTA' || sensors[i].title !== 'PINTOUCH') {
+                workspaceDeviceText = (Blockly.Msg['SENSOR_' + sensors[i].title + '_' + this.workspace.device.toUpperCase()]
+                    || Blockly.Msg['SENSOR_' + sensors[i].title] || Blockly.checkMsgKey(sensors[i].title));
+            }
             for (var j = 0; j < sensors[i].modes.length; j++) {
                 // we can not provide sensors in this block with array output
                 if (sensors[i].modes[j].type.indexOf('Array') > -1) {
@@ -404,8 +410,7 @@ Blockly.Blocks['robSensors_generic_all'] = {
                     + ' '
                     + (Blockly.Msg['SENSOR_UNIT_' + sensors[i].modes[j].unit] || Blockly.checkMsgKey(sensors[i].modes[j].unit))
                     + ' '
-                    + (Blockly.Msg['SENSOR_' + sensors[i].title + '_' + this.workspace.device.toUpperCase()]
-                        || Blockly.Msg['SENSOR_' + sensors[i].title] || Blockly.checkMsgKey(sensors[i].title)),
+                    + workspaceDeviceText,
                     sensors[i].title + '_' + sensors[i].modes[j].name]);
                 if (sensors[i].ports) {
                     var portsList = [];

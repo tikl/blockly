@@ -309,6 +309,7 @@ Blockly.TYPE_DROPDOWN = function(device, opt_handler) {
             }
         });
     case 'bob3':
+    case 'rob3rta':
         return new Blockly.FieldDropdown([ [ Blockly.Msg.VARIABLES_TYPE_NUMBER, 'Number' ], [ Blockly.Msg.VARIABLES_TYPE_BOOLEAN, 'Boolean' ],
                 [ Blockly.Msg.VARIABLES_TYPE_COLOUR, 'Colour' ] ], function(option) {
             if (option && this.sourceBlock_.getFieldValue('TYPE') !== option) {
