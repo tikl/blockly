@@ -1561,10 +1561,6 @@ Blockly.Msg.SENSOR_COLOURTCS3472_LIGHT_GETSAMPLE_TOOLTIP = Blockly.Msg.COLOUR_LI
 Blockly.Msg.SENSOR_COLOURTCS3472_RGB_GETSAMPLE_TOOLTIP = Blockly.Msg.COLOUR_RGB_GETSAMPLE_TOOLTIP;
 Blockly.Msg.SENSOR_DATA_READY = 'ready?';
 
-Blockly.Msg.NN_IO_NEURON_NAMES_INVALID = 'names of input/output neurons must be all different and valid (start with letter, no spaces, ...)';
-Blockly.Msg.NN_STEP_TOOLTIP = 'retrieve inputs, execute one step in a neural network, write the outputs into variables';
-Blockly.Msg.NN_STEP = 'one NN step';
-
 Blockly.Msg.NN_SETUP = 'setup the neural network';
 Blockly.Msg.NN_SETUP_TOOLTIP = 'define properties of a neural network, which can classify data';
 Blockly.Msg.NN_NUMBER_OF_CLASSES = '# classes';
@@ -1588,6 +1584,22 @@ Blockly.Msg.NN_TRAIN_TOOLTIP = 'train the neural network with the trainings data
 Blockly.Msg.NN_CLASSIFY = 'classifiy';
 Blockly.Msg.NN_CLASSIFY_TOOLTIP = 'use the trained neural network and data from feature extraction to classify and return the probabiliy for each class';
 Blockly.Msg.NN_CLASS_PROBABILITIES = 'probabilities';
+
+Blockly.Msg.NN_STEP = 'make one NN step';
+Blockly.Msg.NN_STEP_TOOLTIP = 'retrieve inputs values, execute one step in a neural network, generate values of the output neurons';
+Blockly.Msg.NN_CHANGE_WEIGHT = 'change weight from';
+Blockly.Msg.NN_CHANGE_WEIGHT_TOOLTIP = 'change the weight between two neurons. Either add a value or set a new value.';
+Blockly.Msg.NN_CHANGE_BIAS = 'change bias of';
+Blockly.Msg.NN_CHANGE_BIAS_TOOLTIP = 'change the bias of a neuron. Either add a value or set a new value.';
+Blockly.Msg.NN_INPUT_NEURON = 'input neuron';
+Blockly.Msg.NN_OUTPUT_NEURON = 'output neuron';
+Blockly.Msg.NN_GET_OUTPUT_NEURON_VALUE = 'get value of output neuron';
+Blockly.Msg.NN_GET_OUTPUT_NEURON_VALUE_TOOLTIP = 'return the value of an output neuron from the last step of the neural network.';
+Blockly.Msg.NN_IO_NEURON_NAMES_INVALID = 'names of input/output neurons must be all different and valid (start with letter, no spaces, ...)';
+Blockly.Msg.NN_VALUE = 'value:';
+Blockly.Msg.NN_TO = 'to';
+Blockly.Msg.NN_BY = 'by';
+Blockly.Msg.NN_TARGET = 'to';
 
 Blockly.Msg.MIN_ANGLE = 'Minimum angle';
 Blockly.Msg.MAX_ANGLE = 'Maximum angle';

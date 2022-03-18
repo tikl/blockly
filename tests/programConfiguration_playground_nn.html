@@ -53,7 +53,7 @@
 <script src="../blocks/robConfigDefinitions.js"></script>
 <script src="../blocks/robActions.js"></script>
 
-<script src="../msg/js/en.js"></script>
+<script src="../msg/js/de.js"></script>
 <link rel="stylesheet" type="text/css" href="typicons.css">
 </link>
 <script>
@@ -185,7 +185,7 @@ h1 {
 </style>
 </head>
 <body onload="start()">
-    <h1>Blockly NANO33BLE Playground</h1>
+    <h1>Blockly NN Playground</h1>
     <table id="octaweb">
         <tr>
             <th>Program</th>
@@ -348,21 +348,14 @@ h1 {
             <block type="robSensors_gyro_getSample"></block>
             <block type="robSensors_accelerometer_getSample"></block>
         </category>
-        <category name="TOOLBOX_INTEGRATED_SENSOR" svg="true">
-            <block type="robSensors_lsm9ds1_acceleration_getDataAvailableSample"></block>
-            <block type="robSensors_lsm9ds1_gyro_getDataAvailableSample"></block>
-            <block type="robSensors_lsm9ds1_magneticfield_getDataAvailableSample"></block>
-            <block type="robSensors_apds9960_distance_getDataAvailableSample"></block>
-            <block type="robSensors_apds9960_gesture_getDataAvailableSample"></block>
-            <block type="robSensors_apds9960_color_getDataAvailableSample"></block>
-            <block type="robSensors_lps22hb_pressure_getDataAvailableSample"></block>
-            <block type="robSensors_hts221_temperature_getDataAvailableSample"></block>
-            <block type="robSensors_hts221_humidity_getDataAvailableSample"></block>
-        </category>
         <category name="TOOLBOX_NEURAL_NETWORK" svg="true">
             <block type="robActions_NNstep"></block>
             <block type="robActions_inputneuron"></block>
             <block type="robActions_outputneuron"></block>
+            <block type="robActions_outputneuron_wo_var"></block>
+            <block type="robSensors_get_outputneuron_val"></block>
+            <block type="robActions_change_weight"></block>
+            <block type="robActions_change_bias"></block>
         </category>
         <category name="TOOLBOX_CONTROL" svg="true">
             <category name="TOOLBOX_DECISION" svg="true">

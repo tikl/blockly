@@ -1581,17 +1581,65 @@ Blockly.Blocks["robActions_NNstep"] = {
     },
 };
 
+Blockly.Blocks["robActions_change_weight"] = {
+    init: function () {
+        this.setColour(Blockly.CAT_SENSOR_RGB);
+        var from = new Blockly.FieldTextInput("", this.validate);
+        from.maxDisplayLength = 75;
+        var to = new Blockly.FieldTextInput("", this.validate);
+        to.maxDisplayLength = 75;
+        var change = [ [ Blockly.Msg.NN_TO, "SET" ], [ Blockly.Msg.NN_BY, "INCR" ] ];
+        var dropDown = new Blockly.FieldDropdown(change);
+        this.appendDummyInput()
+            .appendField(Blockly.Msg.NN_CHANGE_WEIGHT)
+            .appendField(from, "FROM")
+            .appendField(Blockly.Msg.NN_TARGET)
+            .appendField(to, "TO")
+            .appendField(dropDown, "CHANGE");
+        this.appendValueInput("VALUE")
+            .setAlign(Blockly.ALIGN_RIGHT)
+            .appendField(Blockly.Msg.NN_VALUE)
+            .setCheck("Number");
+        this.setInputsInline(true);
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
+        this.setTooltip(Blockly.Msg.NN_CHANGE_WEIGHT_TOOLTIP);
+    },
+};
+
+Blockly.Blocks["robActions_change_bias"] = {
+    init: function () {
+        this.setColour(Blockly.CAT_SENSOR_RGB);
+        var name = new Blockly.FieldTextInput("", this.validate);
+        name.maxDisplayLength = 75;
+        var change = [ [ Blockly.Msg.NN_TO, "SET" ], [ Blockly.Msg.NN_BY, "INCR" ] ];
+        var dropDown = new Blockly.FieldDropdown(change);
+        this.appendDummyInput()
+            .appendField(Blockly.Msg.NN_CHANGE_BIAS)
+            .appendField(name, "NAME")
+            .appendField(dropDown, "CHANGE");
+        this.appendValueInput("VALUE")
+            .setAlign(Blockly.ALIGN_RIGHT)
+            .appendField(Blockly.Msg.NN_VALUE)
+            .setCheck("Number");
+        this.setInputsInline(true);
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
+        this.setTooltip(Blockly.Msg.NN_CHANGE_BIAS_TOOLTIP);
+    },
+};
+
 Blockly.Blocks["robActions_inputneuron"] = {
     init: function () {
         this.setColour(Blockly.CAT_SENSOR_RGB);
         var name = new Blockly.FieldTextInput("", this.validate);
         name.maxDisplayLength = 75;
         this.appendDummyInput()
-            .appendField("input neuron", "SENSORTITLE")
+            .appendField(Blockly.Msg.NN_INPUT_NEURON)
             .appendField(name, "NAME");
         this.appendValueInput("VALUE")
             .setAlign(Blockly.ALIGN_RIGHT)
-            .appendField("value", "EXPR")
+            .appendField(Blockly.Msg.NN_VALUE)
             .setCheck("Number");
         this.setPreviousStatement(true, "neuron");
         this.setNextStatement(true, "neuron");
@@ -1609,11 +1657,11 @@ Blockly.Blocks["robActions_outputneuron"] = {
         var name = new Blockly.FieldTextInput("", this.validate);
         name.maxDisplayLength = 75;
         this.appendDummyInput()
-            .appendField("output neuron", "SENSORTITLE")
+            .appendField(Blockly.Msg.NN_OUTPUT_NEURON)
             .appendField(name, "NAME");
         this.appendValueInput("VALUE")
             .setAlign(Blockly.ALIGN_RIGHT)
-            .appendField("value", "EXPR")
+            .appendField(Blockly.Msg.NN_VALUE)
             .setCheck("Number");
         this.setPreviousStatement(true, "neuron");
         this.setNextStatement(true, "neuron");
@@ -1623,5 +1671,36 @@ Blockly.Blocks["robActions_outputneuron"] = {
         bumpIfNotNeuron(this.nextConnection.targetConnection);
         bumpIfNotNeuron(this.previousConnection.targetConnection);
         mustBeVariable(this, ["VALUE"]);
+    }
+};
+
+Blockly.Blocks["robActions_outputneuron_wo_var"] = {
+    init: function () {
+        this.setColour(Blockly.CAT_ACTION_RGB);
+        var name = new Blockly.FieldTextInput("", this.validate);
+        name.maxDisplayLength = 75;
+        this.appendDummyInput()
+            .appendField(Blockly.Msg.NN_OUTPUT_NEURON)
+            .appendField(name, "NAME");
+        this.setPreviousStatement(true, "neuron");
+        this.setNextStatement(true, "neuron");
+        this.setInputsInline(true);
+    },
+    onchange: function (evt) {
+        bumpIfNotNeuron(this.nextConnection.targetConnection);
+        bumpIfNotNeuron(this.previousConnection.targetConnection);
+    }
+};
+
+Blockly.Blocks["robSensors_get_outputneuron_val"] = {
+    init: function() {
+        this.setColour(Blockly.CAT_ACTION_RGB);
+        var name = new Blockly.FieldTextInput("", this.validate);
+        name.maxDisplayLength = 75;
+        this.appendDummyInput()
+            .appendField(Blockly.Msg.NN_GET_OUTPUT_NEURON_VALUE)
+            .appendField(name, "NAME");
+        this.setOutput(true, "Number");
+        this.setTooltip(Blockly.Msg.NN_GET_OUTPUT_NEURON_VALUE_TOOLTIP);
     }
 };

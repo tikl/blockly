@@ -1395,8 +1395,19 @@
     "MODE_CALIBRATION": "Kalibrierungswert",
     "MODE_CO2EQUIVALENT": "CO2 Äquivalent",
     "MODE_VOCEQUIVALENT": "Atemluft VOC Äquivalent",
-	"NN_IO_NEURON_NAMES_INVALID": "Namen der Input/Output-Neuronem müssen unterschiedlich und gültig sein (mit Buchstaben beginnen, keine Leerzeichen, ...)",
-	"NN_STEP_TOOLTIP": "hole die Werte für die Input-Neuronen, führe einen Schritt im neuronalen Netzwerk aus und schreibe die Werte der Output-Neuronen in die Variablen",
-	"NN_STEP": "ein NN Schritt"
-
+    "NN_STEP": "mache einen NN Schritt",
+    "NN_STEP_TOOLTIP": "hole die Werte für die Input-Neuronen, führe einen Schritt im neuronalen Netzwerk aus und erzeuge die Werte der Output-Neuronen",
+    "NN_CHANGE_WEIGHT": "ändere Gewicht von",
+    "NN_CHANGE_WEIGHT_TOOLTIP": "ändere das Gewicht zwischen zwei Neuronen. Addiert einen Wert oder setzt ihn.",
+    "NN_CHANGE_BIAS": "ändere Bias von",
+    "NN_CHANGE_BIAS_TOOLTIP": "Ändere den Bias eines Neurons. Addiert einen Wert oder setzt ihn.",
+    "NN_INPUT_NEURON": "Eingabe-Neuron",
+    "NN_OUTPUT_NEURON": "Ausgabe-Neuron",
+    "NN_GET_OUTPUT_NEURON_VALUE": "gib den Wert des Ausgabe-Neurons",
+    "NN_GET_OUTPUT_NEURON_VALUE_TOOLTIP": "liefere den Wert eines Ausgabe-Neurons vom letzten Schritt des neuronalen Netzwerks",
+    "NN_IO_NEURON_NAMES_INVALID": "Namen der Input/Output-Neuronem müssen unterschiedlich und gültig sein (mit Buchstaben beginnen, keine Leerzeichen, ...)",
+    "NN_VALUE": "Wert:",
+    "NN_TO": "auf",
+    "NN_BY": "um",
+    "NN_TARGET": "nach"
 }
