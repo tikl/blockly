@@ -74,10 +74,16 @@ Blockly.Blocks['makeblockActions_leds_off'] = {
             [Blockly.Msg.MOTOR_RIGHT, 'Right'],
         ]);
         this.setColour(Blockly.CAT_ACTION_RGB);
-        if (this.workspace.device === 'bob3' || this.workspace.device === 'rob3rta') {
+        if (this.workspace.device === 'bob3') {
             this.appendDummyInput()
                 .appendField(Blockly.Msg.SET_LED)
                 .appendField(Blockly.Msg.NAO_LED_EYE)
+                .appendField(ledSide, 'LEDSIDE')
+                .appendField(Blockly.Msg.OFF);
+        } else if (this.workspace.device === 'rob3rta') {
+            this.appendDummyInput()
+                .appendField(Blockly.Msg.SET_LED)
+                .appendField(Blockly.Msg.NAO_LED_HEAD)
                 .appendField(ledSide, 'LEDSIDE')
                 .appendField(Blockly.Msg.OFF);
         } else {
